@@ -224,6 +224,73 @@ table{border-collapse:collapse;width:100%}
 .bt td.bar{width:45%;min-width:90px}.bt td.bar i{display:block;height:8px;border-radius:99px;background:linear-gradient(90deg,var(--o),var(--y))}
 .fine{font-size:12.5px;color:var(--mut);margin-top:10px;max-width:760px}
 .pfoot2{margin-top:40px}
+
+.btn.rep{gap:6px;font-size:14px;padding:10px 18px;min-height:44px;border-color:rgba(255,106,0,.7);color:var(--o);background:transparent;cursor:pointer;font-family:inherit}
+.btn.rep svg{width:16px;height:16px;fill:none;stroke:currentColor;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round}
+.btn.rep:hover,.btn.rep[aria-expanded=true]{background:var(--o);color:#fff;border-color:var(--o)}
+.btn.rep:focus-visible{outline:2px solid var(--y);outline-offset:2px}
+.pi small{display:block;font-size:11.5px;font-weight:600;color:var(--mut);margin-top:1px}
+.pi .tt{display:block}
+.pr-only{display:none}
+@media (max-width:640px){.pact .btn.share,.pact .btn.rep{flex:1 1 140px}}
+/* ---------------- print: clean light single-purpose report ---------------- */
+@media print{
+ @page{margin:.5in}
+ *,*:before,*:after{-webkit-print-color-adjust:exact!important;print-color-adjust:exact!important}
+ html,body{background:#fff!important;background-image:none!important;color:#111!important;font-size:10pt}
+ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;line-height:1.3}
+ .wrap{max-width:none;padding:0}
+ .top,.crumb,.pact,.exp,.pop,.cta-band,.pfoot,.legend,.phero>*:not(.strip),.sessions-screen,.tag,.screen-only,.psec>h2 .exp{display:none!important}
+ .pr-only{display:block}
+ .pr-head{padding:0 0 8px;border-bottom:3px solid #FF6A00;margin-bottom:10px}
+ .pr-head .pr-brand{font-size:8.5pt;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:#c24e00}
+ .pr-head h1{font-size:26pt;line-height:1;font-weight:900;letter-spacing:-.02em;text-transform:uppercase;margin:3px 0 4px;color:#000}
+ .pr-head .pr-range{font-size:10pt;color:#444}
+ .phero{padding:0}
+ .strip{margin:0 0 4px;background:#d8d8d8;border:1px solid #d8d8d8;border-radius:6px;break-inside:avoid}
+ .strip .stat{background:#fafafa;padding:7px 9px 6px;flex:1 1 90px}
+ .strip .stat .v{font-size:15pt;color:#000}
+ .stat .u{color:#666}.stat .l{color:#555;font-size:8pt}
+ .psec{margin-top:14px}
+ .psec h2{font-size:9pt;color:#c24e00;margin-bottom:7px;letter-spacing:.16em;break-after:avoid}
+ .pbs{grid-template-columns:repeat(4,1fr);gap:6px}
+ .pb{background:#f6f6f6!important;border:1px solid #ddd;border-radius:6px;padding:6px 8px;break-inside:avoid}
+ .pb .l{color:#c24e00;font-size:7pt;margin-bottom:2px}.pb .v{font-size:13pt;color:#000}.pb .d{color:#555;font-size:7.5pt;margin-top:1px}
+ .charts{grid-template-columns:repeat(3,1fr);gap:8px}
+ .chart{background:#fff!important;border:1px solid #ddd;border-radius:6px;padding:7px 7px 3px;break-inside:avoid}
+ .chart figcaption{font-size:8.5pt;color:#111}.chart figcaption span{color:#666;font-size:7pt}
+ .chart .gl{stroke:#d5d5d5}.chart .ax{fill:#555}
+ .chart .ln{stroke:#e85d00}.chart .pt{fill:#fff;stroke:#e85d00}.chart .pl{fill:#FFD400;stroke:#e85d00}
+ .tw{overflow:visible}
+ .bt{font-size:9pt;max-width:none;width:70%}
+ .bt th{color:#555;border-bottom:1px solid #bbb;padding:3px 8px}
+ .bt tbody th{color:#111}.bt tbody th small{color:#666;font-size:7.5pt}
+ .bt td{border-bottom:1px solid #e4e4e4;padding:4px 8px}
+ .bt td.bar i{background:linear-gradient(90deg,#FF6A00,#FFB300)!important;height:6px}
+ .fine{color:#666;font-size:7.5pt;margin-top:5px}
+ .pr-sum{break-before:auto}
+ .rs{font-size:8.5pt;font-variant-numeric:tabular-nums}
+ .rs th{text-align:left;font-size:7.5pt;letter-spacing:.06em;text-transform:uppercase;color:#555;border-bottom:1px solid #999;padding:3px 6px}
+ .rs td{padding:2.5px 6px;border-bottom:1px solid #e6e6e6;vertical-align:top}
+ .rs tr{break-inside:avoid}
+ .rs .rn{text-align:right;width:1%;white-space:nowrap}.rs .rd{white-space:nowrap;width:1%}
+ .pcols{column-count:2;column-gap:.25in}
+ .pk{break-inside:avoid;margin:0 0 9px}
+ .pk h3{font-size:8.5pt;font-weight:800;color:#111;margin-bottom:2px}.pk h3 span{font-weight:600;color:#555}
+ .kt{font-size:7pt;min-width:0;max-width:none;width:100%}
+ .kt th{color:#555;border-bottom:1px solid #999;padding:2px 3px;font-size:6.2pt}
+ .kt th small{color:#888;font-size:5.8pt}
+ .kt td{border-bottom:1px solid #e8e8e8;padding:1.2px 3px}
+ .kt .c-n{color:#777}
+ .kt tr.ms td{background:#fff0f0!important}.kt tr.mk td{background:#f0fbf4!important}
+ .kt td.best{color:#a83c00;background:#ffe3cc!important;box-shadow:none}
+ .dot{width:6px;height:6px;margin-right:4px}
+ .pr-foot{margin-top:16px;padding-top:8px;border-top:2px solid #FF6A00;font-size:8.5pt;color:#333;break-inside:avoid}
+ .pr-foot b{color:#000;font-size:9.5pt}
+ .pr-foot p{margin-top:3px}
+ .pr-foot a{color:#0a4fa8;text-decoration:underline}
+ a{color:inherit}
+}
 @media (max-width:640px){
  .phero{padding-top:18px}
  .sd-body .tw{background:linear-gradient(to right,#0d0d0d 30%,rgba(13,13,13,0)),linear-gradient(to right,rgba(13,13,13,0),#0d0d0d 70%) 100% 0,radial-gradient(farthest-side at 0 50%,rgba(255,106,0,.4),rgba(0,0,0,0)),radial-gradient(farthest-side at 100% 50%,rgba(255,106,0,.4),rgba(0,0,0,0)) 100% 0;background-repeat:no-repeat;background-size:36px 100%,36px 100%,12px 100%,12px 100%;background-attachment:local,local,scroll,scroll}
@@ -243,6 +310,7 @@ table{border-collapse:collapse;width:100%}
 </style>
 </head><body>
 <div class="wrap">
+ <div class="pr-head pr-only"><div class="pr-brand">3Point Kicking &times; Trackman</div><h1>Jack McCallister</h1><div class="pr-range">May 29, 2026 &middot; 2 sessions &middot; 24 kicks</div></div>
  <div class="top"><div class="brand">3Point <i>Kicking</i></div>
   <div class="top-r"><a class="crumb" href="../../#p-jack-m">&larr; College &amp; Pro</a><span class="tm"><img src="../../../assets/trackman-logo.png" alt="Trackman"></span></div></div>
  <section class="phero">
@@ -250,7 +318,7 @@ table{border-collapse:collapse;width:100%}
   <div class="pm"><span class="tag tag-camp" style="margin-left:0">Camp</span><span>May 29, 2026</span></div>
   
   
-  <div class="pact"><button type="button" class="btn share" id="shareBtn" aria-haspopup="dialog" aria-expanded="false" data-url="https://3pointkicking.github.io/tm-0286fb5e3f/college-pro/players/jack-m/" data-title="Jack McCallister | 3Point Kicking Trackman numbers" data-text="Jack McCallister: 53 yd longest punt, 4.92 s punt hang time - measured by Trackman"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 15V3M7 8l5-5 5 5"/><path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-7"/></svg>Share</button></div>
+  <div class="pact"><button type="button" class="btn rep" id="repBtn" data-ptitle="Jack McCallister - Trackman report - 3Point Kicking" aria-haspopup="menu" aria-expanded="false" aria-controls="rpop"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h6"/></svg>Get report</button><button type="button" class="btn share" id="shareBtn" aria-haspopup="dialog" aria-expanded="false" data-url="https://3pointkicking.github.io/tm-0286fb5e3f/college-pro/players/jack-m/" data-title="Jack McCallister | 3Point Kicking Trackman numbers" data-text="Jack McCallister: 53 yd longest punt, 4.92 s punt hang time - measured by Trackman"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 15V3M7 8l5-5 5 5"/><path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-7"/></svg>Share</button></div>
   <div class="strip"><div class="stat"><div class="v">2</div><div class="l">Sessions</div></div><div class="stat"><div class="v">24</div><div class="l">Kicks tracked</div></div><div class="stat"><div class="v">52.9<span class="u"> yd</span></div><div class="l">Longest punt</div></div><div class="stat"><div class="v">4.92<span class="u"> s</span></div><div class="l">Best punt hang</div></div><div class="stat"><div class="v">4.39<span class="u"> s</span></div><div class="l">Best pooch hang</div></div></div>
  </section>
 </div>
@@ -258,25 +326,29 @@ table{border-collapse:collapse;width:100%}
  <section class="psec"><h2>Personal bests</h2><div class="pbs"><div class="pb"><div class="l">Longest punt</div><div class="v">52.9 yd</div><div class="d">May 29, 2026</div></div><div class="pb"><div class="l">Best punt hang time</div><div class="v">4.92 s</div><div class="d">May 29, 2026</div></div><div class="pb"><div class="l">Best pooch hang time</div><div class="v">4.39 s</div><div class="d">May 29, 2026</div></div><div class="pb"><div class="l">Longest pooch</div><div class="v">40.4 yd</div><div class="d">May 29, 2026</div></div><div class="pb"><div class="l">Top ball speed</div><div class="v">65.0 mph</div><div class="d">Punt · May 29, 2026</div></div><div class="pb"><div class="l">Highest apex</div><div class="v">81.1 ft</div><div class="d">Punt · May 29, 2026</div></div></div></section>
  
  
- <section class="psec"><h2><span>Sessions (2)</span><span class="exp"><button type="button" data-exp="open">Expand all</button><button type="button" data-exp="close">Collapse all</button></span></h2>
+ <section class="psec pr-only pr-sum"><h2>Session summary</h2><table class="rs"><thead><tr><th scope="col">Date</th><th scope="col">Type</th><th scope="col" class="rn">Kicks</th><th scope="col">Key numbers</th></tr></thead><tbody><tr><td class="rd">Fri, May 29, 2026</td><td>Pooch Punts</td><td class="rn">6</td><td>avg 37.0 yd · max 40.4 yd · best hang 4.39 s · avg speed 60.5 mph</td></tr><tr><td class="rd">Fri, May 29, 2026</td><td>Punts</td><td class="rn">18</td><td>avg 47.4 yd · max 52.9 yd · best hang 4.92 s · avg speed 61.5 mph</td></tr></tbody></table></section>
+ <section class="psec pr-only pr-det"><h2>Kick-by-kick detail</h2><p class="fine">Kick-by-kick detail for every session. Green dot = made field goal, red = miss; highlighted = best in that session. Side: R = right, L = left of the line.</p><div class="pcols"><div class="pk"><h3>Fri, May 29, 2026 <span>Pooch Punts · 6 kicks · max 40.4 yd · 4.39 s hang</span></h3><div class="tw" aria-label="Pooch Punts kicks, Fri, May 29, 2026"><table class="kt"><caption class="sr">Pooch Punts kicks, Fri, May 29, 2026</caption><thead><tr><th scope="col" class="c-n">#</th><th scope="col">Length<small>yd</small></th><th scope="col">Hang<small>s</small></th><th scope="col">Speed<small>mph</small></th><th scope="col">Launch<small>°</small></th><th scope="col">Apex<small>ft</small></th><th scope="col">Side<small>ft</small></th></tr></thead><tbody><tr><td class="c-n">1</td><td>37.0</td><td class="best">4.39</td><td class="best">63.3</td><td>47.8</td><td class="best">70.2</td><td>71.6 L</td></tr><tr><td class="c-n">2</td><td>37.1</td><td>4.08</td><td>58.5</td><td>47.6</td><td>60.8</td><td>3.5 L</td></tr><tr><td class="c-n">3</td><td class="best">40.4</td><td>3.86</td><td>61.2</td><td>45.1</td><td>54.6</td><td>47.1 L</td></tr><tr><td class="c-n">4</td><td>35.2</td><td>4.25</td><td>59.3</td><td>48.9</td><td>66.2</td><td>31.3 L</td></tr><tr><td class="c-n">5</td><td>36.8</td><td>4.16</td><td>60.7</td><td>48.5</td><td>64.3</td><td>28.1 L</td></tr><tr><td class="c-n">6</td><td>35.6</td><td>4.19</td><td>60.0</td><td>47.3</td><td>63.6</td><td>40.7 L</td></tr></tbody></table></div></div><div class="pk"><h3>Fri, May 29, 2026 <span>Punts · 18 kicks · max 52.9 yd · 4.92 s hang</span></h3><div class="tw" aria-label="Punts kicks, Fri, May 29, 2026"><table class="kt"><caption class="sr">Punts kicks, Fri, May 29, 2026</caption><thead><tr><th scope="col" class="c-n">#</th><th scope="col">Length<small>yd</small></th><th scope="col">Hang<small>s</small></th><th scope="col">Speed<small>mph</small></th><th scope="col">Launch<small>°</small></th><th scope="col">Apex<small>ft</small></th><th scope="col">Side<small>ft</small></th></tr></thead><tbody><tr><td class="c-n">1</td><td>44.6</td><td>4.25</td><td>56.9</td><td>44.3</td><td>61.4</td><td>19.1 R</td></tr><tr><td class="c-n">2</td><td>51.6</td><td>4.58</td><td>62.1</td><td>49.5</td><td>74.0</td><td>37.8 R</td></tr><tr><td class="c-n">3</td><td>48.3</td><td>4.49</td><td>59.9</td><td>44.1</td><td>63.9</td><td>59.0 R</td></tr><tr><td class="c-n">4</td><td>40.0</td><td>3.99</td><td>60.1</td><td>47.7</td><td>62.5</td><td>36.2 R</td></tr><tr><td class="c-n">5</td><td>49.0</td><td>4.45</td><td>60.5</td><td>45.8</td><td>70.0</td><td>56.3 R</td></tr><tr><td class="c-n">6</td><td>50.6</td><td>4.65</td><td>63.8</td><td>51.0</td><td>77.1</td><td>22.2 R</td></tr><tr><td class="c-n">7</td><td>43.5</td><td>4.87</td><td>63.8</td><td>51.6</td><td>80.4</td><td>24.3 R</td></tr><tr><td class="c-n">8</td><td class="best">52.9</td><td>4.74</td><td>64.8</td><td>51.4</td><td>78.4</td><td>51.2 R</td></tr><tr><td class="c-n">9</td><td>52.6</td><td>4.48</td><td>61.6</td><td>44.5</td><td>71.9</td><td>18.0 R</td></tr><tr><td class="c-n">10</td><td>39.4</td><td>3.98</td><td>60.3</td><td>44.8</td><td>60.8</td><td>47.4 R</td></tr><tr><td class="c-n">11</td><td>48.9</td><td>4.17</td><td>59.7</td><td>39.9</td><td>55.5</td><td>70.8 L</td></tr><tr><td class="c-n">12</td><td>50.6</td><td class="best">4.92</td><td>63.4</td><td>52.9</td><td class="best">81.1</td><td>51.0 L</td></tr><tr><td class="c-n">13</td><td>52.7</td><td>4.38</td><td>61.6</td><td>46.1</td><td>69.5</td><td>18.7 L</td></tr><tr><td class="c-n">14</td><td>48.5</td><td>4.41</td><td>59.6</td><td>43.9</td><td>62.5</td><td>37.5 L</td></tr><tr><td class="c-n">15</td><td>47.6</td><td>4.63</td><td>61.6</td><td>49.0</td><td>76.3</td><td>26.1 L</td></tr><tr><td class="c-n">16</td><td>39.1</td><td>4.47</td><td>58.8</td><td>46.3</td><td>70.9</td><td>65.3 L</td></tr><tr><td class="c-n">17</td><td>42.6</td><td>4.70</td><td>64.0</td><td>52.5</td><td>80.9</td><td>44.8 L</td></tr><tr><td class="c-n">18</td><td>50.9</td><td>4.40</td><td class="best">65.0</td><td>42.0</td><td>66.4</td><td>38.5 L</td></tr></tbody></table></div></div></div></section>
+ <section class="psec sessions-screen"><h2><span>Sessions (2)</span><span class="exp"><button type="button" data-exp="open">Expand all</button><button type="button" data-exp="close">Collapse all</button></span></h2>
  <details class="sd" id="s1" open><summary><span class="sd-date">Fri, May 29, 2026<small>9:18 AM PT</small></span><span class="sd-type t-poochpunt">Pooch Punts</span><span class="sd-key">Max 40.4 yd &middot; 4.39 s</span><span class="sd-n">6 kicks</span><svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="sd-body"><div class="sgrid"><div class="stat"><div class="v">37.0<span class="u"> yd</span></div><div class="l">Avg length</div></div><div class="stat"><div class="v">40.4<span class="u"> yd</span></div><div class="l">Max length</div></div><div class="stat"><div class="v">4.16<span class="u"> s</span></div><div class="l">Avg hang time</div></div><div class="stat"><div class="v">4.39<span class="u"> s</span></div><div class="l">Max hang time</div></div><div class="stat"><div class="v">60.5<span class="u"> mph</span></div><div class="l">Avg ball speed</div></div><div class="stat"><div class="v">63.3<span class="u"> ft</span></div><div class="l">Avg apex</div></div></div><div class="tw" tabindex="0" role="region" aria-label="Pooch Punts kicks, Fri, May 29, 2026"><table class="kt"><caption class="sr">Pooch Punts kicks, Fri, May 29, 2026</caption><thead><tr><th scope="col" class="c-n">#</th><th scope="col">Length<small>yd</small></th><th scope="col">Hang<small>s</small></th><th scope="col">Speed<small>mph</small></th><th scope="col">Launch<small>°</small></th><th scope="col">Apex<small>ft</small></th><th scope="col">Side<small>ft</small></th></tr></thead><tbody><tr><td class="c-n">1</td><td>37.0</td><td class="best">4.39</td><td class="best">63.3</td><td>47.8</td><td class="best">70.2</td><td>71.6 L</td></tr><tr><td class="c-n">2</td><td>37.1</td><td>4.08</td><td>58.5</td><td>47.6</td><td>60.8</td><td>3.5 L</td></tr><tr><td class="c-n">3</td><td class="best">40.4</td><td>3.86</td><td>61.2</td><td>45.1</td><td>54.6</td><td>47.1 L</td></tr><tr><td class="c-n">4</td><td>35.2</td><td>4.25</td><td>59.3</td><td>48.9</td><td>66.2</td><td>31.3 L</td></tr><tr><td class="c-n">5</td><td>36.8</td><td>4.16</td><td>60.7</td><td>48.5</td><td>64.3</td><td>28.1 L</td></tr><tr><td class="c-n">6</td><td>35.6</td><td>4.19</td><td>60.0</td><td>47.3</td><td>63.6</td><td>40.7 L</td></tr></tbody></table></div></div></details><details class="sd" id="s2"><summary><span class="sd-date">Fri, May 29, 2026<small>8:50 AM PT</small></span><span class="sd-type t-puntaway">Punts</span><span class="sd-key">Max 52.9 yd &middot; 4.92 s</span><span class="sd-n">18 kicks</span><svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="sd-body"><div class="sgrid"><div class="stat"><div class="v">47.4<span class="u"> yd</span></div><div class="l">Avg length</div></div><div class="stat"><div class="v">52.9<span class="u"> yd</span></div><div class="l">Max length</div></div><div class="stat"><div class="v">4.48<span class="u"> s</span></div><div class="l">Avg hang time</div></div><div class="stat"><div class="v">4.92<span class="u"> s</span></div><div class="l">Max hang time</div></div><div class="stat"><div class="v">61.5<span class="u"> mph</span></div><div class="l">Avg ball speed</div></div><div class="stat"><div class="v">70.2<span class="u"> ft</span></div><div class="l">Avg apex</div></div></div><div class="tw" tabindex="0" role="region" aria-label="Punts kicks, Fri, May 29, 2026"><table class="kt"><caption class="sr">Punts kicks, Fri, May 29, 2026</caption><thead><tr><th scope="col" class="c-n">#</th><th scope="col">Length<small>yd</small></th><th scope="col">Hang<small>s</small></th><th scope="col">Speed<small>mph</small></th><th scope="col">Launch<small>°</small></th><th scope="col">Apex<small>ft</small></th><th scope="col">Side<small>ft</small></th></tr></thead><tbody><tr><td class="c-n">1</td><td>44.6</td><td>4.25</td><td>56.9</td><td>44.3</td><td>61.4</td><td>19.1 R</td></tr><tr><td class="c-n">2</td><td>51.6</td><td>4.58</td><td>62.1</td><td>49.5</td><td>74.0</td><td>37.8 R</td></tr><tr><td class="c-n">3</td><td>48.3</td><td>4.49</td><td>59.9</td><td>44.1</td><td>63.9</td><td>59.0 R</td></tr><tr><td class="c-n">4</td><td>40.0</td><td>3.99</td><td>60.1</td><td>47.7</td><td>62.5</td><td>36.2 R</td></tr><tr><td class="c-n">5</td><td>49.0</td><td>4.45</td><td>60.5</td><td>45.8</td><td>70.0</td><td>56.3 R</td></tr><tr><td class="c-n">6</td><td>50.6</td><td>4.65</td><td>63.8</td><td>51.0</td><td>77.1</td><td>22.2 R</td></tr><tr><td class="c-n">7</td><td>43.5</td><td>4.87</td><td>63.8</td><td>51.6</td><td>80.4</td><td>24.3 R</td></tr><tr><td class="c-n">8</td><td class="best">52.9</td><td>4.74</td><td>64.8</td><td>51.4</td><td>78.4</td><td>51.2 R</td></tr><tr><td class="c-n">9</td><td>52.6</td><td>4.48</td><td>61.6</td><td>44.5</td><td>71.9</td><td>18.0 R</td></tr><tr><td class="c-n">10</td><td>39.4</td><td>3.98</td><td>60.3</td><td>44.8</td><td>60.8</td><td>47.4 R</td></tr><tr><td class="c-n">11</td><td>48.9</td><td>4.17</td><td>59.7</td><td>39.9</td><td>55.5</td><td>70.8 L</td></tr><tr><td class="c-n">12</td><td>50.6</td><td class="best">4.92</td><td>63.4</td><td>52.9</td><td class="best">81.1</td><td>51.0 L</td></tr><tr><td class="c-n">13</td><td>52.7</td><td>4.38</td><td>61.6</td><td>46.1</td><td>69.5</td><td>18.7 L</td></tr><tr><td class="c-n">14</td><td>48.5</td><td>4.41</td><td>59.6</td><td>43.9</td><td>62.5</td><td>37.5 L</td></tr><tr><td class="c-n">15</td><td>47.6</td><td>4.63</td><td>61.6</td><td>49.0</td><td>76.3</td><td>26.1 L</td></tr><tr><td class="c-n">16</td><td>39.1</td><td>4.47</td><td>58.8</td><td>46.3</td><td>70.9</td><td>65.3 L</td></tr><tr><td class="c-n">17</td><td>42.6</td><td>4.70</td><td>64.0</td><td>52.5</td><td>80.9</td><td>44.8 L</td></tr><tr><td class="c-n">18</td><td>50.9</td><td>4.40</td><td class="best">65.0</td><td>42.0</td><td>66.4</td><td>38.5 L</td></tr></tbody></table></div></div></details>
  </section>
  <p class="legend">Every Trackman kick from each session, newest first. <span style="color:#37d67a">&#9679;</span> made field goal, <span style="color:#ff5a5a">&#9679;</span> miss. Yellow = best in that session. Kick numbers follow Trackman; a skipped number is a removed radar misread. Side: R = right, L = left of the line. Orange badges mark a top-3 spot among the college &amp; pro players on the list. Distances in yards, hang time in seconds, ball speed in mph, apex in feet. Times Pacific.</p>
  <section class="cta-band">
   <h2>Want your own <span>report?</span></h2>
   <p>Train with Coach Cole and get your Trackman numbers, trends and a full written report.</p>
-  <a class="btn cta" href="https://3point-kicking.square.site/" target="_blank" rel="noopener">Request your report</a>
+  <a class="btn cta" href="https://square.site/book/89Y7BKA1F7H9X/3point-kicking" target="_blank" rel="noopener">Book a lesson</a>
  </section>
  <footer class="pfoot">
   <div class="pw"><span>Powered by Trackman data</span> <span class="tm"><img src="../../../assets/trackman-logo.png" alt="Trackman"></span></div>
   <div><a href="../../#p-jack-m" style="text-decoration:underline">College &amp; Pro</a> &middot; Last updated Oct 10, 2026 &middot; data through Sep 25, 2026</div>
  </footer>
+ <footer class="pr-foot pr-only"><p><b>3Point Kicking</b> &middot; Coach Cole</p><p>Questions? Book a lesson: <a href="https://3point-kicking.square.site/">https://3point-kicking.square.site/</a></p><p>Want a coach to walk you through these numbers? Book a diagnostic: <a href="https://square.site/book/89Y7BKA1F7H9X/3point-kicking">https://square.site/book/89Y7BKA1F7H9X/3point-kicking</a></p><p>All numbers and charts: <a href="https://3pointkicking.github.io/tm-0286fb5e3f/college-pro/players/jack-m/">https://3pointkicking.github.io/tm-0286fb5e3f/college-pro/players/jack-m/</a></p><p>Data measured by Trackman. Last updated Oct 10, 2026; data through Sep 25, 2026.</p></footer>
 </main>
 <div class="pop" id="pop" role="dialog" aria-label="Share this player" hidden>
  <button type="button" class="pi" data-a="copy"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V6a2 2 0 0 1 2-2h9"/></svg><span>Copy link</span></button>
  <a class="pi" data-a="x" href="#" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4l16 16M20 4L4 20"/></svg><span>Share on X</span></a>
  <a class="pi" data-a="fb" href="#" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 8h3V4h-3a4 4 0 0 0-4 4v3H7v4h3v6h4v-6h3l1-4h-4V8z"/></svg><span>Share on Facebook</span></a>
 </div>
+<div class="pop" id="rpop" role="menu" aria-label="Get this player's report" hidden><button type="button" class="pi" role="menuitem" data-a="pdf"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12M7 11l5 5 5-5"/><path d="M5 20h14"/></svg><span><span class="tt">Save as PDF</span><small>Opens your print screen</small></span></button><a class="pi" role="menuitem" data-a="mail" href="mailto:?subject=Jack%20McCallister%20-%20Trackman%20report%20from%203Point%20Kicking&amp;body=Jack%20McCallister%20-%20Trackman%20report%20from%203Point%20Kicking%0D%0A%0D%0A2%20sessions%2C%2024%20kicks%20tracked%20%28May%2029%2C%202026%29%0D%0APunts%3A%20longest%2052.9%20yd%2C%20best%20hang%204.92%20s%0D%0APooch%20punts%3A%20best%20hang%204.39%20s%0D%0A%0D%0APersonal%20bests%3A%0D%0A-%20Longest%20pooch%3A%2040.4%20yd%20%28May%2029%2C%202026%29%0D%0A-%20Top%20ball%20speed%3A%2065.0%20mph%20%28Punt%20%C2%B7%20May%2029%2C%202026%29%0D%0A-%20Highest%20apex%3A%2081.1%20ft%20%28Punt%20%C2%B7%20May%2029%2C%202026%29%0D%0A%0D%0AAll%20the%20numbers%20and%20charts%3A%20https%3A%2F%2F3pointkicking.github.io%2Ftm-0286fb5e3f%2Fcollege-pro%2Fplayers%2Fjack-m%2F%0D%0A%0D%0AWant%20a%20coach%20to%20walk%20you%20through%20these%20numbers%3F%20Book%20a%20diagnostic%3A%0D%0Ahttps%3A%2F%2Fsquare.site%2Fbook%2F89Y7BKA1F7H9X%2F3point-kicking"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg><span><span class="tt">Email it to me</span><small>Opens your email app</small></span></a></div>
 <script>
 (function(){
  var btn=document.getElementById('shareBtn'),pop=document.getElementById('pop'),tm=null;
@@ -302,6 +374,29 @@ table{border-collapse:collapse;width:100%}
  document.addEventListener('click',function(e){if(!pop.hidden&&!pop.contains(e.target)&&!btn.contains(e.target))closePop()});
  document.addEventListener('keydown',function(e){if(e.key==='Escape'&&!pop.hidden){closePop();btn.focus()}});
  window.addEventListener('scroll',function(){if(!pop.hidden)place()},{passive:true});window.addEventListener('resize',function(){if(!pop.hidden)place()});
+
+ /* ---- Get report: Save as PDF (print) / Email it to me (mailto link) ---- */
+ var rb=document.getElementById('repBtn'),rp=document.getElementById('rpop');
+ if(rb&&rp){
+  var oldTitle=document.title;
+  function rplace(){var r=rb.getBoundingClientRect(),w=rp.offsetWidth,h=rp.offsetHeight,vw=document.documentElement.clientWidth,vh=window.innerHeight;
+   if(r.bottom<0||r.top>vh){rclose();return}
+   var x=Math.max(8,Math.min(r.left,vw-w-8)),y=r.bottom+8;if(y+h>vh-8)y=Math.max(8,r.top-h-8);rp.style.left=x+'px';rp.style.top=y+'px'}
+  function rclose(){rb.setAttribute('aria-expanded','false');rp.hidden=true}
+  function ropen(){closePop();rb.setAttribute('aria-expanded','true');rp.hidden=false;rplace();rp.querySelector('.pi').focus({preventScroll:true})}
+  rb.addEventListener('click',function(e){e.preventDefault();rp.hidden?ropen():rclose()});
+  rp.querySelector('[data-a=pdf]').addEventListener('click',function(){
+   rclose();
+   [].forEach.call(document.querySelectorAll('details.sd'),function(d){d.open=true});
+   document.title=rb.getAttribute('data-ptitle')||document.title;
+   setTimeout(function(){try{window.print()}catch(e){}},60)});
+  rp.querySelector('[data-a=mail]').addEventListener('click',function(){setTimeout(rclose,50)});
+  window.addEventListener('afterprint',function(){document.title=oldTitle});
+  document.addEventListener('click',function(e){if(!rp.hidden&&!rp.contains(e.target)&&!rb.contains(e.target))rclose()});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape'&&!rp.hidden){rclose();rb.focus()}});
+  window.addEventListener('scroll',function(){if(!rp.hidden)rplace()},{passive:true});window.addEventListener('resize',function(){if(!rp.hidden)rplace()});
+  btn.addEventListener('click',function(){rclose()},true);
+ }
  var ds=[].slice.call(document.querySelectorAll('details.sd'));
  [].forEach.call(document.querySelectorAll('[data-exp]'),function(b){b.addEventListener('click',function(){var o=b.getAttribute('data-exp')==='open';ds.forEach(function(d){d.open=o})})});
  if(location.hash&&/^#s\d+$/.test(location.hash)){var t=document.getElementById(location.hash.slice(1));if(t){t.open=true;t.scrollIntoView()}}
