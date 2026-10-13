@@ -39,6 +39,10 @@ a{color:inherit;text-decoration:none}
 .top-r{display:flex;align-items:center;gap:14px;flex-wrap:wrap;justify-content:flex-end}
 .xlink{display:inline-flex;align-items:center;font-size:13px;font-weight:800;letter-spacing:.04em;color:var(--y);border:1px solid var(--y);border-radius:999px;padding:9px 16px;min-height:40px;white-space:nowrap;transition:.15s}
 .xlink:hover{background:var(--y);color:#000}
+.lft{display:flex;align-items:center;gap:12px;min-width:0}
+.home{display:inline-flex;align-items:center;font-size:13px;font-weight:800;letter-spacing:.04em;color:#000;background:var(--y);border:1px solid var(--y);border-radius:999px;padding:9px 16px;min-height:40px;white-space:nowrap;transition:.15s}
+.home:hover{background:#fff;border-color:#fff}
+@media (max-width:560px){.top{gap:6px}.lft{gap:6px}.home{font-size:11px;padding:7px 9px;min-height:34px;letter-spacing:0}.top-r .xlink{font-size:11px;padding:7px 9px;min-height:34px;letter-spacing:0}.brand img{height:32px!important}.top-r{gap:6px!important}.top .tm img{height:14px}}
 .tag{margin-left:auto;align-self:flex-start;flex:none;font-size:10.5px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--o);border:1px solid rgba(255,106,0,.6);background:rgba(255,106,0,.1);padding:4px 9px;border-radius:999px}
 .tag-pro{color:#000;background:var(--o);border-color:var(--o)}
 .hero{padding:34px 0 22px}
@@ -228,7 +232,7 @@ abbr.low{text-decoration:none;color:var(--o);font-weight:800;cursor:help;font-si
 </style>
 </head><body>
 <div class="wrap">
- <div class="top"><div class="brand"><img src="assets/3pk-logo.png" alt="3Point Kicking"></div>
+ <div class="top"><div class="lft"><a class="brand" href="https://3point-kicking.square.site/" aria-label="3Point Kicking home"><img src="assets/3pk-logo.png" alt="3Point Kicking"></a><a class="home" href="https://3point-kicking.square.site/">&larr; 3PK Home</a></div>
   <!-- LOGO SLOT (header): drop a PNG at site/assets/trackman-logo.png and re-run build_site.py -->
   <div class="top-r"><a class="xlink" href="college-pro/">College &amp; Pro &rarr;</a><span class="tm"><img src="assets/trackman-logo.png" alt="Trackman"></span></div></div>
  <section class="hero">
