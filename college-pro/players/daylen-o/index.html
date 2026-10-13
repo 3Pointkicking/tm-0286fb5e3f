@@ -32,6 +32,7 @@ a{color:inherit;text-decoration:none}
 .top{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:22px 0 8px}
 .brand{font-weight:900;letter-spacing:.14em;font-size:13px;text-transform:uppercase;color:var(--y)}
 .brand i{font-style:normal;color:#fff}
+.brand{line-height:0;flex:0 0 auto}.brand img{height:56px;width:auto;display:block}
 .tm{display:inline-flex;align-items:center;color:var(--o);font-weight:900;letter-spacing:.22em;font-size:13px}
 .tm img{height:22px;width:auto;display:block}.tm.sm img{height:14px}.tm.sm{font-size:9px;letter-spacing:.18em}
 .slot-note{display:none}
@@ -152,7 +153,7 @@ abbr.low{text-decoration:none;color:var(--o);font-weight:800;cursor:help;font-si
  .stat .v{font-size:26px}
  .btn.cta{width:100%}
  .foot-r{gap:8px}.btn.ghost{padding:8px 13px;min-height:38px}
- .brand{white-space:nowrap;font-size:12px}.top-r{gap:10px}.xlink{padding:8px 12px;font-size:12px}
+ .brand{white-space:nowrap;font-size:12px}.brand img{height:40px}.top-r{gap:10px}.xlink{padding:8px 12px;font-size:12px}
 }
 @media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
 
@@ -243,8 +244,8 @@ table{border-collapse:collapse;width:100%}
  .top,.crumb,.pact,.exp,.pop,.cta-band,.pfoot,.legend,.phero>*:not(.strip),.sessions-screen,.tag,.screen-only,.psec>h2 .exp{display:none!important}
  .pr-only{display:block}
  .pr-logos.pr-only{display:flex;align-items:center;justify-content:space-between;gap:12px;margin:0 0 9px}
- .pr-logos .lg-3pk{display:flex;align-items:center;min-height:.42in}
- .pr-logos .lg-3pk img{display:block;max-height:.42in;max-width:2.6in;width:auto;height:auto}
+ .pr-logos .lg-3pk{display:flex;align-items:center;background:#0b0b0b!important;border-radius:8px;padding:.06in .16in;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+ .pr-logos .lg-3pk img{display:block;height:.5in;width:auto}
  .pr-logos .lg-3pk .wm{display:inline-block;background:#FFD400!important;color:#000!important;font-weight:900;font-size:13pt;letter-spacing:-.01em;line-height:1;padding:.1in .16in;border-radius:8px}
  .pr-logos .lg-tm{display:flex;align-items:center;background:#0b0b0b!important;border-radius:8px;padding:.075in .14in}
  .pr-logos .lg-tm img{display:block;height:.26in;width:auto}
@@ -300,7 +301,7 @@ table{border-collapse:collapse;width:100%}
 @media (max-width:640px){
  .phero{padding-top:18px}
  .sd-body .tw{background:linear-gradient(to right,#0d0d0d 30%,rgba(13,13,13,0)),linear-gradient(to right,rgba(13,13,13,0),#0d0d0d 70%) 100% 0,radial-gradient(farthest-side at 0 50%,rgba(255,106,0,.4),rgba(0,0,0,0)),radial-gradient(farthest-side at 100% 50%,rgba(255,106,0,.4),rgba(0,0,0,0)) 100% 0;background-repeat:no-repeat;background-size:36px 100%,36px 100%,12px 100%,12px 100%;background-attachment:local,local,scroll,scroll}
- .top{flex-wrap:nowrap;gap:8px}.top .brand{font-size:11px;letter-spacing:.1em}.top-r{flex-wrap:nowrap;gap:8px}
+ .top{flex-wrap:nowrap;gap:8px}.top .brand{font-size:11px;letter-spacing:.1em}.top .brand img{height:38px}.top-r{flex-wrap:nowrap;gap:8px}
  .crumb{font-size:12px;padding:8px 11px;min-height:38px}.top .tm img{height:17px}
  .strip .stat .v{font-size:24px}.strip .stat{padding:13px 14px 11px;flex:1 1 40%}
  .sd summary{grid-template-columns:1fr auto 20px;gap:8px 10px;padding:13px 14px}
@@ -316,8 +317,8 @@ table{border-collapse:collapse;width:100%}
 </style>
 </head><body>
 <div class="wrap">
- <div class="pr-head pr-only"><div class="pr-logos pr-only"><div class="lg-3pk"><span class="wm">3Point Kicking</span></div><div class="lg-tm"><img src="../../../assets/trackman-logo.png" alt="Trackman"></div></div><div class="pr-brand">3Point Kicking &times; Trackman</div><h1>Daylen Ortiz</h1><div class="pr-range">May 19, 2026 &middot; 1 session &middot; 33 kicks</div></div>
- <div class="top"><div class="brand">3Point <i>Kicking</i></div>
+ <div class="pr-head pr-only"><div class="pr-logos pr-only"><div class="lg-3pk"><img src="../../../assets/3pk-logo.png" alt="3Point Kicking"></div><div class="lg-tm"><img src="../../../assets/trackman-logo.png" alt="Trackman"></div></div><div class="pr-brand">3Point Kicking &times; Trackman</div><h1>Daylen Ortiz</h1><div class="pr-range">May 19, 2026 &middot; 1 session &middot; 33 kicks</div></div>
+ <div class="top"><div class="brand"><img src="../../../assets/3pk-logo.png" alt="3Point Kicking"></div>
   <div class="top-r"><a class="crumb" href="../../#p-daylen-o">&larr; College &amp; Pro</a><span class="tm"><img src="../../../assets/trackman-logo.png" alt="Trackman"></span></div></div>
  <section class="phero">
   <h1>Daylen Ortiz</h1>
@@ -345,9 +346,9 @@ table{border-collapse:collapse;width:100%}
  </section>
  <footer class="pfoot">
   <div class="pw"><span>Powered by Trackman data</span> <span class="tm"><img src="../../../assets/trackman-logo.png" alt="Trackman"></span></div>
-  <div><a href="../../#p-daylen-o" style="text-decoration:underline">College &amp; Pro</a> &middot; Last updated Oct 10, 2026 &middot; data through Sep 25, 2026</div>
+  <div><a href="../../#p-daylen-o" style="text-decoration:underline">College &amp; Pro</a> &middot; Last updated Oct 12, 2026 &middot; data through Sep 25, 2026</div>
  </footer>
- <footer class="pr-foot pr-only"><p><b>3Point Kicking</b> &middot; Coach Cole</p><p>Questions? Book a lesson: <a href="https://3point-kicking.square.site/">https://3point-kicking.square.site/</a></p><p>Want a coach to walk you through these numbers? Book a diagnostic: <a href="https://square.site/book/89Y7BKA1F7H9X/3point-kicking">https://square.site/book/89Y7BKA1F7H9X/3point-kicking</a></p><p>All numbers and charts: <a href="https://3pointkicking.github.io/tm-0286fb5e3f/college-pro/players/daylen-o/">https://3pointkicking.github.io/tm-0286fb5e3f/college-pro/players/daylen-o/</a></p><p>Data measured by Trackman. Last updated Oct 10, 2026; data through Sep 25, 2026.</p></footer>
+ <footer class="pr-foot pr-only"><p><b>3Point Kicking</b> &middot; Coach Cole</p><p>Questions? Book a lesson: <a href="https://3point-kicking.square.site/">https://3point-kicking.square.site/</a></p><p>Want a coach to walk you through these numbers? Book a diagnostic: <a href="https://square.site/book/89Y7BKA1F7H9X/3point-kicking">https://square.site/book/89Y7BKA1F7H9X/3point-kicking</a></p><p>All numbers and charts: <a href="https://3pointkicking.github.io/tm-0286fb5e3f/college-pro/players/daylen-o/">https://3pointkicking.github.io/tm-0286fb5e3f/college-pro/players/daylen-o/</a></p><p>Data measured by Trackman. Last updated Oct 12, 2026; data through Sep 25, 2026.</p></footer>
 </main>
 <div class="pop" id="pop" role="dialog" aria-label="Share this player" hidden>
  <button type="button" class="pi" data-a="copy"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V6a2 2 0 0 1 2-2h9"/></svg><span>Copy link</span></button>
