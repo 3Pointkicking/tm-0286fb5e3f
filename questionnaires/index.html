@@ -89,14 +89,15 @@ footer a{color:var(--y)}
 details.find{border:2px solid var(--y)!important;border-radius:14px;background:#141100!important;box-shadow:0 0 0 4px rgba(255,216,20,.12);margin:14px 0}
 details.find>summary{background:var(--y)!important;color:#000!important;font-weight:900;font-size:18px;letter-spacing:.04em;text-transform:uppercase;padding:14px 16px;border-radius:11px;cursor:pointer;list-style:none}
 details.find>summary::-webkit-details-marker{display:none}
-details.find>summary::after{content:" \25BE";float:right}
+details.find>summary::after{content:" \25BC";margin-left:8px;display:inline-block;font-size:.9em;transition:transform .2s}
 details.find[open]>summary{border-radius:11px 11px 0 0}
-details.find[open]>summary::after{content:" \25B4"}
+details.find[open]>summary::after{transform:rotate(180deg)}
+details.find>summary:hover{filter:brightness(1.08)}
 details.find .act{background:#000!important;color:var(--y)!important}
 details.find label{color:var(--tx)}
 details.find button{background:var(--y);color:#000;border:0;font-weight:800}
 @media(max-width:600px){details.find>summary{font-size:16px;padding:13px 14px}}
-</style></head>
+</style><style>details.find>summary::after{content:none!important}.farr{display:inline-block;margin-left:6px;transition:transform .2s}details.find[open] .farr{transform:rotate(180deg)}</style></head>
 <body>
 <div class="wrap">
  <header class="top">
@@ -116,7 +117,7 @@ details.find button{background:var(--y);color:#000;border:0;font-weight:800}
 </div>
 <div class="wrap" id="findwrap">
  <div class="tabs" role="tablist" aria-label="NCAA division"><button class="tab" role="tab" data-tab="D1" aria-selected="true">D1<small id="n-D1"></small></button><button class="tab" role="tab" data-tab="D2" aria-selected="false">D2<small id="n-D2"></small></button><button class="tab" role="tab" data-tab="D3" aria-selected="false">D3<small id="n-D3"></small></button></div>
- <details class="find" id="find"><summary>Find a School <span class="act" id="fact"></span></summary>
+ <details class="find" id="find"><summary>Click here to search for a school <span class="farr" aria-hidden="true">&#9660;</span> <span class="act" id="fact"></span></summary>
   <div class="fgrid">
    <label>School size<select id="f-size"><option value="">Any size</option><option value="0-5000">Under 5,000 undergrads</option><option value="5000-15000">5,000–15,000</option><option value="15000-30000">15,000–30,000</option><option value="30000-1e9">30,000+</option></select></label>
    <label>Region<select id="f-reg"><option value="">Any region</option></select></label>
