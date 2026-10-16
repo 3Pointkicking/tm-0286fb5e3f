@@ -225,6 +225,18 @@ abbr.low{text-decoration:none;color:var(--o);font-weight:800;cursor:help;font-si
 @media print{.abs,.abg,.rls,.hb,.lb{display:none!important}}
 
 .plinks{margin-top:14px}.plinks h2{margin-bottom:10px}
+details.cx{margin-top:14px}
+.cxb{list-style:none;display:flex;align-items:center;justify-content:space-between;gap:10px;min-height:46px;padding:11px 18px;border:1px solid var(--y);border-radius:999px;color:var(--y);font-size:13px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;cursor:pointer;-webkit-tap-highlight-color:transparent;transition:.15s}
+.cxb::-webkit-details-marker{display:none}
+.cxb:hover{background:var(--y);color:#000}.cxb:focus-visible{outline:2px solid var(--y);outline-offset:2px}
+.cxc{font-style:normal;font-size:14px;transition:transform .2s}
+details.cx[open]>.cxb .cxc{transform:rotate(180deg)}
+.cxh,details.cx[open]>.cxb .cxs{display:none}details.cx[open]>.cxb .cxh{display:inline}
+details.cx>.psec{margin-top:10px}
+.sea .pbs{grid-template-columns:repeat(auto-fill,minmax(130px,1fr));gap:8px}.sea .pb{padding:10px 12px}.sea .pb .v{font-size:22px}
+.sea .seat{font-size:13px;font-weight:700;color:var(--mut);letter-spacing:0;text-transform:none}
+.seasrc{font-size:12px;color:var(--mut);margin-top:8px}.seasrc a{color:var(--y);text-decoration:underline}
+@media(max-width:600px){.sea .pbs{grid-template-columns:repeat(3,1fr)}.sea .pb .v{font-size:19px}.sea .pb .d{font-size:11px}}
 @media (max-width:640px){.plinks .rls{gap:8px}.plinks .rl{flex:1 1 120px;padding:8px 12px;min-height:40px;font-size:13px}}
 
 .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
@@ -405,6 +417,8 @@ table{border-collapse:collapse;width:100%}
 <main class="wrap">
  
  
+ 
+ 
  <section class="psec"><h2>Personal bests</h2><div class="pbs"><div class="pb"><div class="l">Longest FG make</div><div class="v">50.9 yd</div><div class="d">Sep 25, 2026</div></div><div class="pb"><div class="l">Most FG makes in a session</div><div class="v">3</div><div class="d">of 7 · Sep 25, 2026</div></div><div class="pb"><div class="l">Top ball speed</div><div class="v">73.7 mph</div><div class="d">FG · Sep 25, 2026</div></div><div class="pb"><div class="l">Highest apex</div><div class="v">45.2 ft</div><div class="d">FG · Sep 25, 2026</div></div></div></section>
  
  
@@ -471,7 +485,7 @@ table{border-collapse:collapse;width:100%}
   var pr=rp.querySelector('[data-a=print]');
   if(pr)pr.addEventListener('click',function(){
    rclose();
-   [].forEach.call(document.querySelectorAll('details.sd'),function(d){d.open=true});
+   [].forEach.call(document.querySelectorAll('details.sd,details.cx'),function(d){d.open=true});
    document.title=rb.getAttribute('data-ptitle')||document.title;
    try{window.print()}catch(e){}});
   rp.querySelector('[data-a=pdf]').addEventListener('click',function(){setTimeout(rclose,50)});
