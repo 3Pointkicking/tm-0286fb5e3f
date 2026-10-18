@@ -223,6 +223,11 @@ abbr.low{text-decoration:none;color:var(--o);font-weight:800;cursor:help;font-si
 @media (max-width:980px){.lbg{grid-template-columns:repeat(2,1fr)}}
 @media (max-width:640px){.lb{padding:16px 14px 12px}.lbg{grid-template-columns:1fr}.lbtabs{width:100%}.lbt{flex:1}.abg{grid-template-columns:1fr}.rl{flex:1 1 140px;justify-content:center}}
 @media print{.abs,.abg,.rls,.hb,.lb{display:none!important}}
+
+.tabs{display:flex;gap:8px;flex-wrap:wrap;padding:10px 0 0}
+.tabs a{font-size:12.5px;font-weight:800;letter-spacing:.04em;color:#cfcfcf;border:1px solid #2a2a2a;border-radius:999px;padding:8px 14px;min-height:36px;display:inline-flex;align-items:center;white-space:nowrap;transition:.15s}
+.tabs a:hover{border-color:var(--y);color:var(--y)}
+.tabs a[aria-current=page]{background:var(--y);border-color:var(--y);color:#000}
 </style>
 <!--pwa--><link rel="manifest" href="../assets/manifest.webmanifest"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="3PK Trackman"><meta name="application-name" content="3PK Trackman"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><link rel="apple-touch-icon" sizes="180x180" href="../assets/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon-32.png"><link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon-16.png"><style>body{padding-top:env(safe-area-inset-top)}@media print{body{padding-top:0}}</style><!--/pwa-->
 </head><body>
@@ -230,6 +235,7 @@ abbr.low{text-decoration:none;color:var(--o);font-weight:800;cursor:help;font-si
  <div class="top"><div class="lft"><a class="brand" href="https://3point-kicking.square.site/" aria-label="3Point Kicking home"><img src="../assets/3pk-logo.png" alt="3Point Kicking"></a><a class="home" href="https://3point-kicking.square.site/">&larr; 3PK Home</a></div>
   <!-- LOGO SLOT (header): drop a PNG at site/assets/trackman-logo.png and re-run build_site.py -->
   <div class="top-r"><a class="xlink" href="../">&larr; 3PK Clients</a><span class="tm"><img src="../assets/trackman-logo.png" alt="Trackman"></span></div></div>
+ <nav class="tabs" aria-label="Pages"><a href="../">3PK Clients</a><a href="../college-pro/" aria-current="page">College &amp; Pro</a><a href="../benchmarks/">Benchmarks</a></nav>
  <section class="hero">
   <h1>College <span>&amp; Pro</span></h1>
   <p>Real numbers from Trackman sessions with college and pro kickers and punters, including 3Point Kicking clients now playing college ball, measured by Trackman radar.</p>
@@ -313,7 +319,7 @@ abbr.low{text-decoration:none;color:var(--o);font-weight:800;cursor:help;font-si
  </section>
  <footer class="pfoot">
   <div class="pw"><span>Powered by Trackman data</span> <span class="tm"><img src="../assets/trackman-logo.png" alt="Trackman"></span></div>
-  <div>Last updated Oct 17, 2026 &middot; data through Sep 25, 2026</div>
+  <div>Last updated Oct 18, 2026 &middot; data through Sep 25, 2026</div>
  </footer>
 </main>
 <div class="pop" id="pop" role="dialog" aria-label="Share this player" hidden>
