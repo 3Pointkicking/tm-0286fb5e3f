@@ -113,6 +113,20 @@ body.calmode #find,body.calmode #soon,body.calmode .controls,body.calmode #list{
 .cn{font-size:13px;color:var(--mut);margin:8px 0 0}
 .cl{display:inline-block;margin-top:10px;background:var(--y);color:#000;font-weight:800;text-decoration:none;padding:8px 12px;border-radius:8px;font-size:14px}
 .csrc{font-size:13px;color:var(--mut);margin:14px 0 0}.csrc a{color:var(--y)}
+</style><style id="xguide-css">
+.xg{border:2px solid var(--y);border-radius:14px;background:#0b0b0b;margin:14px 0 40px;padding:6px 18px 18px;color:var(--tx);line-height:1.5}
+.xg h2{color:var(--y);font-weight:900;font-size:20px;letter-spacing:.04em;text-transform:uppercase;margin:12px 0 2px}
+.xg .xby{color:var(--mut);margin:0 0 10px;font-size:14px}
+.xg h3{color:var(--y);font-size:18px;margin:22px 0 6px}
+.xg ul{margin:6px 0;padding-left:20px}.xg li{margin:4px 0}
+.xg li.chk{list-style:none;margin-left:-20px}.xg li.chk::before{content:"\2610";color:var(--y);margin-right:8px}
+.xg code{background:#1a1a1a;padding:1px 5px;border-radius:5px;color:var(--y)}
+.xg b{color:#fff}.xg hr{border:0;border-top:1px solid var(--line);margin:20px 0}
+.xfig{margin:14px 0 6px}.xfig img{width:100%;max-width:1000px;border-radius:10px;border:1px solid var(--line);display:block}
+.xfig figcaption{font-size:13px;color:var(--mut);margin-top:6px}
+body.calmode #find,body.calmode #soon,body.calmode .controls,body.calmode #list{display:none!important}
+.tab.xgtab{color:var(--y)}.tabs{overflow-x:auto}
+@media(max-width:520px){.xfull{display:none}.tab small{display:none}.tab{padding:12px 6px!important;font-size:13px;letter-spacing:.02em!important}.tabs{gap:2px!important}}
 </style></head>
 <body>
 <div class="wrap">
@@ -132,7 +146,7 @@ body.calmode #find,body.calmode #soon,body.calmode .controls,body.calmode #list{
  </section>
 </div>
 <div class="wrap" id="findwrap">
- <div class="tabs" role="tablist" aria-label="NCAA division"><button class="tab" role="tab" data-tab="D1" aria-selected="true">D1<small id="n-D1"></small></button><button class="tab" role="tab" data-tab="D2" aria-selected="false">D2<small id="n-D2"></small></button><button class="tab" role="tab" data-tab="D3" aria-selected="false">D3<small id="n-D3"></small></button><button class="tab caltab" role="tab" data-cal="1" aria-selected="false"><span class="cfull">Recruiting </span>Calendar</button></div>
+ <div class="tabs" role="tablist" aria-label="NCAA division"><button class="tab" role="tab" data-tab="D1" aria-selected="true">D1<small id="n-D1"></small></button><button class="tab" role="tab" data-tab="D2" aria-selected="false">D2<small id="n-D2"></small></button><button class="tab" role="tab" data-tab="D3" aria-selected="false">D3<small id="n-D3"></small></button><button class="tab caltab" role="tab" data-cal="1" aria-selected="false">Calendar</button><button class="tab xgtab" role="tab" data-xg="1" aria-selected="false">Example X Account</button></div>
  <details class="find" id="find"><summary>Click here to search for a school <span class="farr" aria-hidden="true">&#9660;</span> <span class="act" id="fact"></span></summary>
   <div class="fgrid">
    <label>School size<select id="f-size"><option value="">Any size</option><option value="0-5000">Under 5,000 undergrads</option><option value="5000-15000">5,000–15,000</option><option value="15000-30000">15,000–30,000</option><option value="30000-1e9">30,000+</option></select></label>
@@ -160,6 +174,64 @@ body.calmode #find,body.calmode #soon,body.calmode .controls,body.calmode #list{
  <span class="count" id="count"></span>
 </div></div>
 <main class="wrap" id="list"></main>
+<section class="wrap" id="xguide" hidden><div class="xg"><h2>Build Your X Recruiting Profile</h2><p class="xby">From Coach Cole Murphy, 3Point Kicking</p>
+<p>College coaches check X, often before they ever watch your full Hudl. Make your profile do the work: in five seconds a coach should know who you are, what you kick, and how to reach you. Here's how I want my specialists set up.</p>
+<figure class="xfig"><a href="assets/x-example-profile.jpg" target="_blank" rel="noopener"><img src="assets/x-example-profile.jpg" alt="Example X recruiting profile for a fictional 3PK kicker, with notes on why each part works" loading="lazy"></a><figcaption>Example profile. The player, school and numbers are made up. Tap the image to see it full size.</figcaption></figure>
+<h3>1. Profile basics</h3>
+<ul>
+<li><b>Handle:</b> use your real name, plus your position or class if you need it (e.g. <code>@FirstLastK28</code>). No jokes or nicknames.</li>
+<li><b>Display name:</b> First Last plus your position or class, e.g. "Jake Rivera K/P '28".</li>
+<li><b>Photo:</b> a clear headshot or game photo in your school uniform. Your face should be visible.</li>
+<li><b>Header:</b> an action shot (follow-through, punt, snap) or a clean graphic with your class, position, school and your <b>NCAA ID</b> (from the NCAA Eligibility Center). Coaches use your NCAA ID to find you and add you to their recruiting board, so make it easy to see.</li>
+</ul>
+<h3>2. Bio checklist</h3>
+<p>Fit it into the bio and website field:</p>
+<ul>
+<li class=chk>Class (2027, 2028…)</li>
+<li class=chk>High school and city/state</li>
+<li class=chk>Position: K / P / LS</li>
+<li class=chk>Height / weight</li>
+<li class=chk>GPA (and test score if it's strong)</li>
+<li class=chk>Hudl link (put it in the website field)</li>
+<li class=chk>Trackman link or numbers</li>
+<li class=chk>Email address coaches can use</li>
+<li class=chk>"Trains @3PointKicking"</li>
+</ul>
+<p>Tip: if you need more than one link, put a link page in the website field and list Hudl and Trackman in the bio.</p>
+<h3>3. Pinned post</h3>
+<p>Pin a short film clip (30-60 seconds) of your best reps, with <b>Trackman numbers on screen</b> (FG distance, operation or snap time, drift). Include class, position, height/weight, GPA and email in the text. Update it every season. If you commit, pin your commitment post instead.</p>
+<h3>4. What to post, and when</h3>
+<ul>
+<li><b>After every game:</b> FG x/y (long), PATs, kickoff touchbacks, punt average or hang, snaps. Post the same night or the next morning, and add a photo or short clip to every post. Posts with a picture get seen a lot more.</li>
+<li><b>Camp results:</b> placement, distances, invites. Post them within a day.</li>
+<li><b>Trackman sessions:</b> a clip and the key numbers every few weeks in the offseason.</li>
+<li><b>Offers and visits:</b> a graphic and a thank-you to the staff.</li>
+<li><b>Academic wins:</b> GPA updates, honor roll, test scores. Coaches recruit students too.</li>
+</ul>
+<p>Keep it consistent: one good post beats five random ones.</p>
+<h3>5. Who to tag</h3>
+<ul>
+<li>Your <b>high school program</b>.</li>
+<li><b>@3PointKicking</b>, so I can repost you.</li>
+<li><b>Camps</b> you competed at (tag the camp and its coaches).</li>
+<li><b>A college's special teams coach or program</b>, only when it's relevant: an offer, a visit, their camp, or a direct thank-you. Don't tag 20 coaches on every post.</li>
+</ul>
+<h3>6. Stay professional</h3>
+<ul>
+<li>No negativity, complaining, trash talk or politics.</li>
+<li>Coaches see your <b>likes, reposts and replies</b>. Clean them up.</li>
+<li>Keep the account <b>public</b>. A private account can't be recruited.</li>
+<li>Before you post, ask yourself: would I be fine with a head coach reading this out loud?</li>
+</ul>
+<h3>7. Follow coaches (the right way)</h3>
+<ul>
+<li>Follow the programs you're interested in, plus their special teams coordinators and recruiting staff.</li>
+<li>Follow camps and specialist recruiting services.</li>
+<li><b>Don't spam.</b> No mass follows, no unrequested DMs with film every week. When a coach follows you back, send one short, polite DM with your Hudl, Trackman and email.</li>
+</ul>
+<hr>
+<p><b>3PK clients:</b> bring your profile to your <b>College Pathway meeting</b> and I'll go through it with you: bio, pinned post, who to follow and what to post next. &mdash; Coach Cole</p></div></section>
+
 <section class="wrap" id="reccal" hidden><div class="reccal"><h2>NCAA recruiting calendar 2026&ndash;27</h2>
 <div class="cbody">
 <p class="cint"><b>You can email, call or DM a college coach any time.</b> The calendar only limits when coaches can reach out to you or meet in person.</p>
@@ -231,4 +303,6 @@ init([{"school":"Abilene Christian","div":"FCS","conf":"UAC","url":"https://ques
 </script>
 <script id="reccal-js">(function(){var c=document.querySelector('[data-cal]'),p=document.getElementById('reccal');
 c.addEventListener('click',function(){document.querySelectorAll('[data-tab]').forEach(function(x){x.setAttribute('aria-selected','false')});c.setAttribute('aria-selected','true');p.hidden=false;document.body.classList.add('calmode')});
-document.querySelectorAll('[data-tab]').forEach(function(b){b.addEventListener('click',function(){c.setAttribute('aria-selected','false');p.hidden=true;document.body.classList.remove('calmode')})});})();</script></body></html>
+document.querySelectorAll('[data-tab]').forEach(function(b){b.addEventListener('click',function(){c.setAttribute('aria-selected','false');p.hidden=true;document.body.classList.remove('calmode')})});})();</script><script id="xguide-js">(function(){var x=document.querySelector('[data-xg]'),xp=document.getElementById('xguide'),c=document.querySelector('[data-cal]'),cp=document.getElementById('reccal');
+x.addEventListener('click',function(){document.querySelectorAll('[data-tab],[data-cal]').forEach(function(t){t.setAttribute('aria-selected','false')});x.setAttribute('aria-selected','true');if(cp)cp.hidden=true;xp.hidden=false;document.body.classList.add('calmode')});
+document.querySelectorAll('[data-tab],[data-cal]').forEach(function(b){b.addEventListener('click',function(){x.setAttribute('aria-selected','false');xp.hidden=true})});})();</script></body></html>
