@@ -101,7 +101,7 @@ details.find button{background:var(--y);color:#000;border:0;font-weight:800}
 .reccal{border:2px solid var(--y);border-radius:14px;background:#0b0b0b;margin:14px 0 40px}
 .reccal h2{color:var(--y);font-weight:900;font-size:20px;letter-spacing:.04em;text-transform:uppercase;padding:16px 16px 8px;margin:0}
 body.calmode #find,body.calmode #soon,body.calmode .controls,body.calmode #list{display:none!important}
-.tab.caltab{color:var(--y)}.tabs{overflow-x:auto}@media(max-width:520px){.cfull{display:none}.tab{padding:12px 11px}}
+.tab.caltab{color:var(--y)}.tabs{overflow-x:auto}@media(max-width:520px){.cfull{display:none}.tab{padding:12px 9px}}
 .cbody{padding:0 16px 16px;color:var(--tx)}.cint{margin:0 0 12px}
 .cdef{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:8px;margin-bottom:14px;font-size:14px;color:#cfcfcf}
 .cdef b{color:var(--y);margin-right:6px}
@@ -127,7 +127,7 @@ body.calmode #find,body.calmode #soon,body.calmode .controls,body.calmode #list{
 body.calmode #find,body.calmode #soon,body.calmode .controls,body.calmode #list{display:none!important}
 .tab.xgtab{color:var(--y)}.tabs{overflow-x:auto}
 @media(max-width:520px){.xfull{display:none}.tab small{display:none}.tab{padding:12px 6px!important;font-size:13px;letter-spacing:.02em!important}.tabs{gap:2px!important}}
-</style></head>
+</style><style id="ncaacal-fit">@media(max-width:420px){.tabs .caltab,.tabs .xgtab{font-size:12px}}</style></head>
 <body>
 <div class="wrap">
  <header class="top">
@@ -146,7 +146,7 @@ body.calmode #find,body.calmode #soon,body.calmode .controls,body.calmode #list{
  </section>
 </div>
 <div class="wrap" id="findwrap">
- <div class="tabs" role="tablist" aria-label="NCAA division"><button class="tab" role="tab" data-tab="D1" aria-selected="true">D1<small id="n-D1"></small></button><button class="tab" role="tab" data-tab="D2" aria-selected="false">D2<small id="n-D2"></small></button><button class="tab" role="tab" data-tab="D3" aria-selected="false">D3<small id="n-D3"></small></button><button class="tab caltab" role="tab" data-cal="1" aria-selected="false">Calendar</button><button class="tab xgtab" role="tab" data-xg="1" aria-selected="false">Example X Account</button></div>
+ <div class="tabs" role="tablist" aria-label="NCAA division"><button class="tab" role="tab" data-tab="D1" aria-selected="true">D1<small id="n-D1"></small></button><button class="tab" role="tab" data-tab="D2" aria-selected="false">D2<small id="n-D2"></small></button><button class="tab" role="tab" data-tab="D3" aria-selected="false">D3<small id="n-D3"></small></button><button class="tab caltab" role="tab" data-cal="1" aria-selected="false">NCAA Calendar</button><button class="tab xgtab" role="tab" data-xg="1" aria-selected="false">Example X Account</button></div>
  <details class="find" id="find"><summary>Click here to search for a school <span class="farr" aria-hidden="true">&#9660;</span> <span class="act" id="fact"></span></summary>
   <div class="fgrid">
    <label>School size<select id="f-size"><option value="">Any size</option><option value="0-5000">Under 5,000 undergrads</option><option value="5000-15000">5,000–15,000</option><option value="15000-30000">15,000–30,000</option><option value="30000-1e9">30,000+</option></select></label>
