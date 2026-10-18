@@ -203,7 +203,7 @@ function setupFind(){const A=D.filter(s=>s.pf),u=k=>[...new Set(A.map(s=>s.pf[k]
  const confOpts=()=>{const cs=[...new Set(D.filter(s=>s.tdiv===st.tab).map(s=>s.div+'|'+s.conf))].sort();$('#conf').innerHTML='<option value="">All conferences</option>'+cs.map(k=>{const [dv,c]=k.split('|');return `<option value="${esc(c)}">${esc(c)} (${dv})</option>`}).join('');st.conf=''};confOpts();
  document.querySelectorAll('[data-tab]').forEach(b=>b.onclick=()=>{st.tab=b.dataset.tab;confOpts();document.querySelectorAll('[data-tab]').forEach(x=>x.setAttribute('aria-selected',x===b));render()});
  ['D1','D2','D3'].forEach(t=>{const n=D.filter(s=>s.tdiv===t).length;$('#n-'+t).textContent=n?n:'soon'});
- if(window.matchMedia('(min-width:900px)').matches)$('#find').open=true}
+ }
 function render(){
  const q=norm(st.q.trim());
  const T=D.filter(s=>s.tdiv===st.tab);const f=T.filter(s=>pf(s)&&(!st.div||s.div===st.div)&&(!st.conf||s.conf===st.conf)&&(!st.alum||s.alumni.length)&&(!st.off||s.offers)&&(!q||norm(s.school+' '+s.conf+' '+s.div+' '+s.alumni.join(' ')).includes(q)));
