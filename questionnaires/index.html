@@ -285,7 +285,7 @@ function card(s){
 
 const F=['nk','np','size','reg','st','set','ctl','sfr','acc','tui','maj'];
 function rng(v,r){if(v==null)return false;const [a,b]=r.split('-').map(Number);return v>=a&&v<=b}
-function pf(s){const p=s.pf,f=st.f,k=s.kp||{};if(f.nk&&k.need_k!==f.nk)return false;if(f.np&&k.need_p!==f.np)return false;if(!Object.entries(f).some(([a,x])=>x&&a!=='nk'&&a!=='np'))return true;if(!p)return false;
+function pf(s){const p=s.pf,f=st.f,k=s.kp||{};const nd=s.tdiv==='D1';if(nd&&f.nk&&k.need_k!==f.nk)return false;if(nd&&f.np&&k.need_p!==f.np)return false;if(!Object.entries(f).some(([a,x])=>x&&a!=='nk'&&a!=='np'))return true;if(!p)return false;
  return (!f.size||rng(p.enr,f.size))&&(!f.reg||p.reg===f.reg)&&(!f.st||p.st===f.st)&&(!f.set||p.set===f.set)&&(!f.ctl||p.ctl===f.ctl)&&(!f.sfr||rng(p.sfr,f.sfr))&&(!f.acc||rng(p.acc,f.acc))&&(!f.tui||rng(p.tout,f.tui))&&(!f.maj||p.maj.some(m=>norm(m).includes(norm(f.maj))))}
 const kfmt=n=>n>=1000?(n>=10000?Math.round(n/1000):(n/1000).toFixed(1).replace(/\.0$/,''))+'k':String(n);
 function facts(s){const p=s.pf;if(!p)return '';
@@ -313,7 +313,7 @@ function render(){
  $('#count').textContent=`${f.length} of ${T.length} schools`;
  const na=Object.values(st.f).filter(Boolean).length;$('#fact').textContent=na?na+' active':'';$('#fcount').innerHTML=T.length?`<b>${f.length}</b> of ${T.length} ${st.tab} schools match`:'';
  const soon=!T.length;$('#soon').hidden=!soon;$('#list').hidden=soon;$('#find').hidden=soon;document.querySelector('.controls').hidden=soon;
- document.querySelectorAll('[data-div],#off,#alum').forEach(b=>b.hidden=st.tab!=='D1');
+ document.querySelectorAll('[data-div],#off,#alum').forEach(b=>b.hidden=st.tab!=='D1');['#f-nk','#f-np'].forEach(q=>{const l=$(q)&&$(q).closest('label');if(l)l.style.display=st.tab!=='D1'?'none':''});
  if(soon)$('#soontxt').textContent=`Division ${st.tab==='D2'?'II':'III'} programs are being added with questionnaire links and coaching staff contacts (head coach, special teams and recruiting coordinators). Check back soon.`;
 }
 function init(d){D=d.sort((a,b)=>a.school.localeCompare(b.school));const ALL=D;D=ALL.filter(s=>s.tdiv==='D1');
