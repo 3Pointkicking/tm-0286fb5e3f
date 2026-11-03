@@ -241,7 +241,7 @@ i.alog.fb{display:inline-flex;align-items:center;justify-content:center;font-sty
   .facts{grid-template-columns:1fr;margin-top:0}
 }
 @media(max-width:560px){
-  .ac{overflow:visible;padding:14px;padding-bottom:56px;gap:10px}
+  .ac{overflow:visible;padding:14px;padding-bottom:64px;gap:10px}
   .ah{display:grid;grid-template-columns:100px 1fr;grid-template-areas:"ph team" "meta meta";gap:12px;align-items:center}
   .ph{grid-area:ph;width:100px;height:125px;flex:none;border-radius:14px}
   .ph img{border-radius:14px;object-position:center 28%}
@@ -257,10 +257,11 @@ i.alog.fb{display:inline-flex;align-items:center;justify-content:center;font-sty
   .facts{grid-template-columns:1fr 1fr;gap:6px}
   .fact{padding:7px 8px}
   .fv{font-size:12px}
-  .st{font-size:11.5px;display:block;width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch}
+  .st{font-size:11.5px;display:block;width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch;padding-right:68px;margin-bottom:4px;box-sizing:border-box}
   .st td{white-space:normal}
   .st td:first-child{white-space:nowrap}
-  .ac-mark{right:10px;bottom:8px;width:57px}
+  .abody,.facts,.acc,.pc{padding-right:0}
+  .ac-mark{right:10px;bottom:10px;width:57px}
 }
 @media(max-width:380px){
   .ah{grid-template-columns:88px 1fr;gap:10px}
