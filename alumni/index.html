@@ -1,0 +1,230 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex,nofollow"><meta name="theme-color" content="#000000"><title>3PK Alumni (DRAFT)</title>
+<style>
+:root{--y:#FFD400;--o:#FF6A00;--bg:#000;--card:#0c0c0c;--line:#202020;--tx:#f5f5f5;--mut:#8d8d8d;--r:18px}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{background:var(--bg);color:var(--tx);font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","Segoe UI",Inter,"Helvetica Neue",Arial,sans-serif;line-height:1.35;-webkit-font-smoothing:antialiased;
+ background-image:radial-gradient(900px 420px at 85% -120px,rgba(255,212,0,.10),transparent 70%),radial-gradient(700px 360px at -10% 0,rgba(255,106,0,.08),transparent 70%);background-repeat:no-repeat}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1240px;margin:0 auto;padding:0 20px;padding-left:max(20px,env(safe-area-inset-left));padding-right:max(20px,env(safe-area-inset-right))}
+.top{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:22px 0 8px}
+.brand{font-weight:900;letter-spacing:.14em;font-size:13px;text-transform:uppercase;color:var(--y)}
+.brand i{font-style:normal;color:#fff}
+.brand{line-height:0;flex:0 0 auto}.brand img{height:56px;width:auto;display:block}
+.tm{display:inline-flex;align-items:center;color:var(--o);font-weight:900;letter-spacing:.22em;font-size:13px}
+.tm img{height:22px;width:auto;display:block}.tm.sm img{height:14px}.tm.sm{font-size:9px;letter-spacing:.18em}
+.slot-note{display:none}
+.top-r{display:flex;align-items:center;gap:14px;flex-wrap:wrap;justify-content:flex-end}
+.xlink{display:inline-flex;align-items:center;font-size:13px;font-weight:800;letter-spacing:.04em;color:var(--y);border:1px solid var(--y);border-radius:999px;padding:9px 16px;min-height:40px;white-space:nowrap;transition:.15s}
+.xlink:hover{background:var(--y);color:#000}
+.lft{display:flex;align-items:center;gap:12px;min-width:0}
+.home{display:inline-flex;align-items:center;font-size:13px;font-weight:800;letter-spacing:.04em;color:#000;background:var(--y);border:1px solid var(--y);border-radius:999px;padding:9px 16px;min-height:40px;white-space:nowrap;transition:.15s}
+.home:hover{background:#fff;border-color:#fff}
+@media (max-width:560px){.top{gap:6px}.lft{gap:6px}.home{font-size:11px;padding:7px 9px;min-height:34px;letter-spacing:0}.top-r .xlink{font-size:11px;padding:7px 9px;min-height:34px;letter-spacing:0}.brand img{height:32px!important}.top-r{gap:6px!important}.top .tm img{height:14px}}
+.tag{margin-left:auto;align-self:flex-start;flex:none;font-size:10.5px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--o);border:1px solid rgba(255,106,0,.6);background:rgba(255,106,0,.1);padding:4px 9px;border-radius:999px}
+.tag-pro{color:#000;background:var(--o);border-color:var(--o)}
+.hero{padding:34px 0 22px}
+.hero h1{font-size:clamp(44px,9vw,92px);line-height:.95;font-weight:900;letter-spacing:-.035em;text-transform:uppercase}
+.hero h1 span{color:var(--y)}
+.hero p{margin-top:16px;max-width:620px;color:#b5b5b5;font-size:clamp(16px,2.2vw,19px)}
+.kpis{display:flex;flex-wrap:wrap;gap:10px 34px;margin-top:26px}
+.kpi b{display:block;font-size:clamp(26px,4vw,36px);font-weight:900;letter-spacing:-.02em}
+.kpi span{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--mut)}
+.kpi b em{font-style:normal;color:var(--o)}
+.controls{position:sticky;top:0;z-index:20;background:rgba(0,0,0,.82);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);border-bottom:1px solid var(--line);margin:10px 0 26px}
+.controls .wrap{display:flex;gap:12px;align-items:center;flex-wrap:wrap;padding-top:12px;padding-bottom:12px}
+.search{flex:1 1 240px;min-width:0;position:relative}
+.search input{width:100%;background:#0f0f0f;border:1px solid #2a2a2a;color:#fff;font-size:16px;padding:13px 16px 13px 44px;border-radius:999px;outline:none;-webkit-appearance:none;appearance:none}
+.search input:focus{border-color:var(--y);box-shadow:0 0 0 3px rgba(255,212,0,.15)}
+.search svg{position:absolute;left:16px;top:50%;transform:translateY(-50%);width:18px;height:18px;stroke:var(--mut);fill:none;stroke-width:2}
+.chips{display:flex;gap:8px;flex-wrap:wrap}
+.chip{font:inherit;font-size:14px;font-weight:700;letter-spacing:.04em;color:#ddd;background:#0f0f0f;border:1px solid #2a2a2a;padding:11px 18px;border-radius:999px;cursor:pointer;min-height:44px;-webkit-tap-highlight-color:transparent;transition:.15s}
+.chip:hover{border-color:#555}
+.chip[aria-pressed=true]{background:var(--y);color:#000;border-color:var(--y)}
+.count{font-size:13px;color:var(--mut);margin-left:auto;white-space:nowrap}
+.sort{display:flex;align-items:center;gap:10px;flex:none}
+.sort[hidden],.sortnote[hidden],.rk[hidden]{display:none}
+.sort label{font-size:11px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--mut)}
+.sort .sel{position:relative;min-width:0}
+.sort select{font:inherit;font-size:16px;font-weight:700;letter-spacing:.02em;color:#fff;-webkit-appearance:none;appearance:none;cursor:pointer;min-height:44px;max-width:100%;
+ background:#0f0f0f url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='9' viewBox='0 0 14 9'%3E%3Cpath d='M1.5 1.5l5.5 5.5 5.5-5.5' fill='none' stroke='%23FFD400' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") no-repeat right 16px center;
+ border:1px solid #2a2a2a;border-radius:999px;padding:11px 44px 11px 18px;outline:none;transition:.15s;-webkit-tap-highlight-color:transparent}
+.sort select:hover{border-color:#555}
+.sort select:focus{border-color:var(--y);box-shadow:0 0 0 3px rgba(255,212,0,.15)}
+.sort select option{background:#111;color:#fff}
+.sort select.on{border-color:var(--y)}
+.sortnote{font-size:12.5px;color:var(--mut);margin:-10px 0 18px;max-width:760px}
+.rk{font-size:12px;font-weight:800;letter-spacing:.04em;color:var(--o);margin-top:4px;font-variant-numeric:tabular-nums}
+.rk b{font-weight:900}
+.rk span{color:#fff;font-weight:700}
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(310px,1fr));gap:18px;padding-bottom:40px}
+.card{background:linear-gradient(180deg,#121212,#0a0a0a);border:1px solid var(--line);border-radius:var(--r);padding:20px;display:flex;flex-direction:column;gap:14px;transition:transform .18s,border-color .18s,box-shadow .18s;position:relative;overflow:hidden}
+.card:before{content:"";position:absolute;left:0;top:0;right:0;height:3px;background:linear-gradient(90deg,var(--y),var(--o));opacity:.0;transition:.18s}
+.card:hover{transform:translateY(-3px);border-color:#3a3a3a;box-shadow:0 14px 34px rgba(0,0,0,.6),0 0 0 1px rgba(255,212,0,.08)}
+.card:hover:before{opacity:1}
+.card[hidden]{display:none}
+.card header{display:flex;gap:14px;align-items:center}
+.tag-carney-camp{color:#FF6A00;border-color:rgba(255,106,0,.7);background:rgba(255,106,0,.12);white-space:nowrap;letter-spacing:.1em}
+.tags{margin-left:auto;align-self:flex-start;flex:none;display:flex;flex-direction:column;align-items:flex-end;gap:4px}.tags .tag{margin-left:0}
+.carney-logo{display:inline-block;height:38px;width:auto}
+.ava{flex:none;width:54px;height:54px;border-radius:50%;overflow:hidden;border:2px solid var(--y);background:#151515}
+.ava img{width:100%;height:100%;object-fit:cover;display:block}
+.ava.ph{display:flex;align-items:center;justify-content:center;color:var(--y);font-weight:900;font-size:18px;letter-spacing:.02em;border-color:#3a3200}
+.id h3{font-size:25px;line-height:1.05;font-weight:850;letter-spacing:-.02em}
+.meta{margin-top:4px;font-size:13px;color:var(--mut)}
+.blk{border-top:1px solid #1b1b1b;padding-top:12px}
+.blk h4{font-size:11px;font-weight:800;letter-spacing:.18em;text-transform:uppercase;color:var(--y);margin-bottom:8px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.grid.two{grid-template-columns:repeat(2,1fr)}
+.stat .v{font-size:28px;font-weight:850;letter-spacing:-.03em;line-height:1.05;font-variant-numeric:tabular-nums}
+.stat .u{font-size:12px;font-weight:600;color:var(--mut);margin-left:3px;letter-spacing:0}
+.stat .l{margin-top:3px;font-size:11.5px;color:var(--mut);line-height:1.25}
+.stat.dim .v{color:#777}
+.stat .n{margin-left:4px}
+abbr.low{text-decoration:none;color:var(--o);font-weight:800;cursor:help;font-size:11px;border:0}
+.cards[data-f] .blk{display:none}
+.cards[data-f~=fg] .blk[data-d=fg],.cards[data-f~=ko] .blk[data-d=ko],.cards[data-f~=pu] .blk[data-d=pu],.cards[data-f~=ls] .blk[data-d=ls]{display:block}
+.card footer{margin-top:auto;border-top:1px solid #1b1b1b;padding-top:12px;display:flex;align-items:center;justify-content:space-between;gap:10px}
+.sess b{display:block;font-size:14px;font-weight:800}
+.sess span{font-size:12px;color:var(--mut)}
+.foot-r{display:flex;align-items:center;gap:12px}
+.btn{display:inline-flex;align-items:center;justify-content:center;font-weight:800;letter-spacing:.04em;font-size:13px;padding:10px 16px;border-radius:999px;min-height:40px;transition:.15s;border:1px solid transparent}
+.btn.ghost{border-color:var(--y);color:var(--y)}
+.btn.ghost:hover{background:var(--y);color:#000}
+.btn.share{gap:6px;font-size:12.5px;padding:8px 14px;min-height:38px;border-color:rgba(255,106,0,.7);color:var(--o);background:transparent;cursor:pointer;font-family:inherit}
+.btn.share svg{width:15px;height:15px;fill:none;stroke:currentColor;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round}
+.btn.share:hover,.btn.share[aria-expanded=true]{background:var(--o);color:#fff;border-color:var(--o)}
+.btn.share:focus-visible,.pi:focus-visible{outline:2px solid var(--y);outline-offset:2px}
+.card{scroll-margin-top:96px}
+.card footer{flex-wrap:wrap}
+.vlink{display:flex;flex:0 0 100%;align-items:center;gap:6px;margin-top:2px;padding-top:10px;border-top:1px dashed #222;font-size:13px;font-weight:800;letter-spacing:.03em;color:var(--y);min-height:24px}
+.vlink:after{content:"";position:absolute;inset:0;z-index:1}
+.vlink:focus-visible{outline:2px solid var(--y);outline-offset:3px;border-radius:6px}
+.card:hover .vlink,.card:focus-within .vlink{text-decoration:underline;text-underline-offset:3px}
+.card:focus-within{border-color:var(--y)}
+.card:has(.vlink){cursor:pointer}
+.foot-r .btn{position:relative;z-index:2}
+.card .tm-mini{position:relative;z-index:0}
+.card.hl{outline:3px solid var(--o);outline-offset:3px;box-shadow:0 0 0 7px rgba(255,106,0,.18),0 0 44px rgba(255,106,0,.35)}
+.pop{position:fixed;z-index:60;min-width:200px;background:#111;border:1px solid #333;border-radius:14px;padding:6px;box-shadow:0 14px 44px rgba(0,0,0,.7)}
+.pop[hidden]{display:none}
+.pi{display:flex;align-items:center;gap:10px;width:100%;font:inherit;font-size:14px;font-weight:700;color:#fff;background:none;border:0;border-radius:10px;padding:12px 12px;min-height:44px;cursor:pointer;text-align:left}
+.pi:hover{background:#1d1d1d}
+.pi svg{width:18px;height:18px;flex:none;fill:none;stroke:var(--y);stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.pi.ok{color:var(--y)}
+.btn.cta{background:var(--o);color:#fff;font-size:16px;padding:16px 30px;min-height:52px;box-shadow:0 8px 28px rgba(255,106,0,.32)}
+.btn.cta:hover{background:#ff7d22;transform:translateY(-1px)}
+.empty{display:none;text-align:center;color:var(--mut);padding:60px 0 80px;font-size:17px}
+.legend{font-size:12.5px;color:var(--mut);padding:0 0 28px;max-width:760px}
+.legend abbr{color:var(--o)}
+.cta-band{border-top:1px solid var(--line);padding:46px 0 12px;text-align:center}
+.cta-band h2{font-size:clamp(26px,5vw,40px);font-weight:900;letter-spacing:-.02em;text-transform:uppercase}
+.cta-band h2 span{color:var(--y)}
+.cta-band p{color:#aaa;margin:10px auto 24px;max-width:520px}
+.pfoot{padding:34px 0 calc(40px + env(safe-area-inset-bottom));display:flex;flex-direction:column;align-items:center;gap:10px;color:var(--mut);font-size:13px;text-align:center}
+.pfoot .pw{display:flex;align-items:center;gap:10px;flex-wrap:wrap;justify-content:center}
+@media (max-width:640px){
+ .wrap{padding-left:max(16px,env(safe-area-inset-left));padding-right:max(16px,env(safe-area-inset-right))}
+ .cards{grid-template-columns:1fr;gap:14px}
+ .count{margin-left:auto;font-size:12px}
+ .chips{width:100%}.chip{flex:1;text-align:center;padding:11px 8px}
+ .controls .wrap{gap:10px;padding-top:10px;padding-bottom:10px}
+ .sort{flex:1 1 0;min-width:0;gap:8px}.sort .sel{flex:1;min-width:0}.sort select{width:100%;padding-left:16px}
+ .sort label{letter-spacing:.12em}
+ .sortnote{margin:-14px 0 16px}
+ .stat .v{font-size:26px}
+ .btn.cta{width:100%}
+ .foot-r{gap:8px}.btn.ghost{padding:8px 13px;min-height:38px}
+ .brand{white-space:nowrap;font-size:12px}.brand img{height:40px}.top-r{gap:10px}.xlink{padding:8px 12px;font-size:12px}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+
+.abs{display:flex;flex-wrap:wrap;gap:6px}
+.ab{display:inline-flex;align-items:center;gap:5px;font-size:11.5px;font-weight:750;letter-spacing:.01em;color:#e9e9e9;background:#151515;border:1px solid #2c2c2c;padding:3px 9px 3px 6px;border-radius:999px;white-space:nowrap}
+.ab i{font-style:normal;font-size:12px;line-height:1;filter:saturate(.9)}
+.ab.t3{border-color:rgba(255,212,0,.45);background:linear-gradient(180deg,rgba(255,212,0,.10),rgba(255,212,0,.03))}
+.ab.t4{border-color:var(--y);color:#fff;background:linear-gradient(180deg,rgba(255,212,0,.22),rgba(255,106,0,.10));box-shadow:0 0 0 1px rgba(255,212,0,.15) inset}
+.ab.t5,.ab.t6{color:#000;font-weight:900;border-color:transparent;background:linear-gradient(180deg,#FFE45C,#FFC400)}.ab.t6{background:linear-gradient(90deg,#FFD400,#FF8A00);box-shadow:0 3px 12px rgba(255,170,0,.35)}
+.ab.gd{color:#000;font-weight:900;border-color:transparent;background:linear-gradient(180deg,#FFE45C,#FFC400)}
+.ab.bz{color:#2a1505;font-weight:850;border-color:#8a5a2b;background:linear-gradient(180deg,#E6A77A,#B87333 55%,#8C5226);box-shadow:none}
+.lv{font-style:normal;font-size:10.5px;font-weight:850;letter-spacing:.04em;text-transform:uppercase;padding:1px 6px;border-radius:999px;margin-left:4px;vertical-align:2px}
+.abt span.gh{color:#d9a27a;font-weight:700}
+.ab.more{color:var(--mut);padding:3px 9px}
+.ab.pbnew{color:#000;background:linear-gradient(90deg,var(--y),var(--o));border-color:transparent;font-weight:900;padding:3px 10px;box-shadow:0 4px 14px rgba(255,106,0,.35)}
+.abg{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:10px}
+.abt{display:flex;gap:12px;align-items:center;background:linear-gradient(180deg,#121212,#0a0a0a);border:1px solid var(--line);border-radius:14px;padding:12px 14px}
+.abt .ai{flex:none;width:42px;height:42px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:20px;background:#181818;border:1.5px solid #333}
+.abt b{display:block;font-size:15px;font-weight:850;letter-spacing:-.01em}
+.abt span{display:block;font-size:12px;color:#a9a9a9;margin-top:1px;line-height:1.3}
+.abt small{display:block;font-size:11px;color:var(--o);font-weight:800;letter-spacing:.06em;text-transform:uppercase;margin-top:4px}
+.abt.t3 .ai{border-color:rgba(255,212,0,.6)}.abt.t4 .ai{border-color:var(--y);background:radial-gradient(circle,rgba(255,212,0,.25),#181818 70%)}
+.abt.t5,.abt.t6{border-color:rgba(255,212,0,.55);background:linear-gradient(180deg,rgba(255,212,0,.10),#0a0a0a)}.abt.t5 .ai,.abt.t6 .ai{border:0;background:linear-gradient(135deg,#FFE45C,#FF8A00)}
+.abt.gd{border-color:rgba(255,212,0,.55);background:linear-gradient(180deg,rgba(255,212,0,.10),#0a0a0a)}.abt.gd .ai{border:0;background:linear-gradient(135deg,#FFE45C,#FF8A00)}
+.abt.bz{border-color:rgba(184,115,51,.65);background:linear-gradient(180deg,rgba(184,115,51,.14),#0a0a0a)}.abt.bz .ai{border:0;background:linear-gradient(135deg,#E6A77A,#8C5226)}
+.abt.pbnew{border-color:rgba(255,106,0,.7);background:linear-gradient(180deg,rgba(255,106,0,.14),#0a0a0a)}
+.abt.pbnew .ai{background:linear-gradient(135deg,var(--y),var(--o));color:#000;border:0;font-weight:900}
+.abt.next{opacity:.42;filter:grayscale(1)}.abt.next small{color:var(--mut)}
+.psec h2 em.cnt{font-style:normal;color:var(--mut);letter-spacing:.1em;margin-left:8px}
+.rls{display:flex;flex-wrap:wrap;gap:10px}
+.rl{display:inline-flex;align-items:center;gap:8px;font-size:14px;font-weight:800;letter-spacing:.02em;color:#fff;background:#111;border:1px solid #2e2e2e;border-radius:999px;padding:11px 18px;min-height:44px;transition:.15s}
+.rl i{font-style:normal;color:var(--y);font-size:13px}
+.rl:hover{border-color:var(--y);background:#171717}
+.rl:focus-visible{outline:2px solid var(--y);outline-offset:2px}
+.hb{max-width:760px;margin:0 0 26px;border:1px solid var(--line);border-radius:14px;background:#0a0a0a}
+.hb summary{cursor:pointer;padding:12px 16px;font-size:13px;font-weight:800;letter-spacing:.06em;color:var(--y);list-style:none}
+.hb summary::-webkit-details-marker{display:none}.hb summary:after{content:" +";color:var(--mut)}.hb[open] summary:after{content:" \2013"}
+.hbb{padding:0 16px 14px;font-size:13px;color:#b0b0b0}.hbb ul{list-style:none;margin-top:8px;display:grid;gap:5px}.hbb i{font-style:normal;display:inline-block;width:22px}
+.lb{margin:6px 0 30px;border:1px solid var(--line);border-radius:var(--r);background:linear-gradient(180deg,#101010,#080808);padding:20px 20px 14px;position:relative;overflow:hidden}
+.lb:before{content:"";position:absolute;left:0;right:0;top:0;height:3px;background:linear-gradient(90deg,var(--y),var(--o))}
+.lbh{display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;margin-bottom:6px}
+.lbh h2{font-size:clamp(22px,3.4vw,30px);font-weight:900;letter-spacing:-.02em;text-transform:uppercase}.lbh h2 span{color:var(--y)}
+.lbtabs{display:flex;gap:6px;background:#0f0f0f;border:1px solid #262626;border-radius:999px;padding:4px}
+.lbt{font:inherit;font-size:13px;font-weight:800;color:#cfcfcf;background:none;border:0;border-radius:999px;padding:7px 16px;cursor:pointer;min-height:40px;line-height:1.1;text-align:center}
+.lbt small{display:block;font-size:10.5px;font-weight:600;color:var(--mut);letter-spacing:.04em}
+.lbt[aria-selected=true]{background:var(--y);color:#000}.lbt[aria-selected=true] small{color:#3a3000}
+.lbt:focus-visible{outline:2px solid var(--y);outline-offset:2px}
+.lbp[hidden]{display:none}
+.lbm{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--o);font-weight:800;margin-bottom:12px}
+.lbthin{font-size:13px;color:var(--mut);margin:-6px 0 10px}
+.lbg{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.lbc{background:#0c0c0c;border:1px solid #1d1d1d;border-radius:14px;padding:12px 14px}
+.lbc h3{font-size:11px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--y);margin-bottom:8px}
+.lbc ol{list-style:none;display:grid;gap:2px}
+.lbc li{display:grid;grid-template-columns:22px 1fr auto;align-items:baseline;gap:2px 8px;padding:5px 0;border-bottom:1px solid #161616;font-size:14px}
+.lbc li:last-child{border-bottom:0}
+.lbc li a{font-weight:750;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.lbc li a:hover{color:var(--y);text-decoration:underline}
+.lbc li b{font-weight:850;font-variant-numeric:tabular-nums}.lbc li b small{font-size:11px;color:var(--mut);font-weight:600}
+.lbc li em{grid-column:2/4;font-style:normal;font-size:11px;color:var(--mut);margin-top:-3px}
+.lr{font-size:12px;font-weight:900;color:var(--mut);text-align:center}
+.lbc li:first-child .lr{color:#000;background:var(--y);border-radius:50%;width:20px;height:20px;line-height:20px;font-size:11px}
+.lbc li:nth-child(2) .lr{color:#ddd}.lbc li:nth-child(3) .lr{color:var(--o)}
+.lbn{font-size:13px;color:var(--mut);padding:6px 0}
+.lbe{font-size:15px;color:#bdbdbd;padding:22px 4px 18px;border:1px dashed #2a2a2a;border-radius:14px;text-align:center}
+.lbf{font-size:11.5px;color:var(--mut);margin-top:12px}
+@media (max-width:980px){.lbg{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:640px){.lb{padding:16px 14px 12px}.lbg{grid-template-columns:1fr}.lbtabs{width:100%}.lbt{flex:1}.abg{grid-template-columns:1fr}.rl{flex:1 1 140px;justify-content:center}}
+@media print{.abs,.abg,.rls,.hb,.lb{display:none!important}}
+
+.tabs{display:flex;gap:8px;flex-wrap:wrap;padding:10px 0 0}
+.tabs a{font-size:12.5px;font-weight:800;letter-spacing:.04em;color:#cfcfcf;border:1px solid #2a2a2a;border-radius:999px;padding:8px 14px;min-height:36px;display:inline-flex;align-items:center;white-space:nowrap;transition:.15s}
+.tabs a:hover{border-color:var(--y);color:var(--y)}
+.tabs a[aria-current=page]{background:var(--y);border-color:var(--y);color:#000}
+@media (max-width:560px){.tabs{gap:4px;flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none}.tabs::-webkit-scrollbar{display:none}.tabs a{font-size:10px;letter-spacing:0;padding:6px 6px;min-height:32px;flex:0 0 auto}}
+
+.draft{background:#ffcc00;color:#000;font-weight:900;text-align:center;padding:10px;letter-spacing:.06em;font-size:13px}
+.agrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:16px;margin:20px 0}
+.ac{background:#111;border:1px solid #242424;border-radius:16px;padding:16px;display:flex;flex-direction:column;gap:10px}
+.ah{display:flex;gap:12px;align-items:center}.ph{width:64px;height:64px;border-radius:12px;background:#1d1d1d;border:1px solid #333;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:22px;color:#777;flex:0 0 auto}
+.ac h3{margin:0;font-size:18px}.hs{color:#9a9a9a;font-size:13px}.unc{display:inline-block;margin-top:4px;font-size:11px;font-weight:800;color:#ffb020;border:1px solid #ffb020;border-radius:999px;padding:1px 8px}
+.pc{display:flex;flex-wrap:wrap;gap:6px}.pc span{font-size:11.5px;border:1px solid #333;border-radius:999px;padding:3px 9px;color:#ddd}.pc span.pro{border-color:#555;color:#aaa;font-style:italic}
+.hl{font-size:13px;color:var(--y)}.st{width:100%;border-collapse:collapse;font-size:12px}.st td{padding:4px 2px;border-top:1px solid #222;vertical-align:top;color:#ccc}.st td:first-child{color:#fff;font-weight:800;white-space:nowrap;padding-right:8px}.st small{color:#888}
+</style></head><body>
+<div class="draft">DRAFT / PREVIEW &mdash; NOT LIVE</div>
+<div class="wrap"><div class="top"><div class="lft"><a class="brand" href="https://3point-kicking.square.site/"><img src="../assets/3pk-logo.png" alt="3Point Kicking"></a><a class="home" href="https://3point-kicking.square.site/">&larr; 3PK Home</a></div>
+<div class="top-r"><a class="xlink" href="../">&larr; 3PK Clients</a><span class="tm"><img src="../assets/trackman-logo.png" alt="Trackman"></span></div></div>
+<nav class="tabs" aria-label="Pages"><a href="../">3PK Clients</a><a href="../college-pro/">College &amp; Pro</a><a href="../benchmarks/">Benchmarks</a><a href="../questionnaires/">Recruiting</a><a href="../alumni/" aria-current="page">Alumni</a></nav>
+<section class="hero"><h1>3PK <span>Alumni</span></h1><p>3Point Kicking kickers, punters and snappers who went on to play college football. College special-teams stats per season.</p>
+<div class="kpis"><div class="kpi"><b>29</b><span>Alumni</span></div></div></section>
+<main><div class="agrid"><article class="ac"><div class="ah"><div class="ph" aria-label="photo coming soon">TB</div><div><h3>Tanner Brown</h3><div class="hs">Saugus &middot; Santa Clarita, CA</div></div></div><div class="pc"><span class="">College of the Canyons (2018–2019)</span><span class="">UNLV (2020)</span><span class="">Oklahoma State (2021–2022)</span><span class="pro">Los Angeles Rams (2023–2024)</span><span class="pro">Atlanta Falcons (2024)</span><span class="pro">Louisville Kings (2026)</span><span class="pro">New Orleans Saints (2026)</span></div><div class="hl">2026 UFL Special Teams Player of the Year and United Bowl champion; 63-yard FG in the playoffs</div><table class="st"><tr><td>2018</td><td>College of the Canyons <small>(JUCO)</small><br>FG 17-21, XP 44-44, 95 pts, Punts 44, avg 34.2, 16 TB (KO)</td></tr><tr><td>2019</td><td>College of the Canyons <small>(JUCO)</small><br>FG 11-17, long 50, XP 56-58, 89 pts, Punts 27, avg 39.1, 10 TB (KO)</td></tr><tr><td>2020</td><td>UNLV <small>(FBS)</small><br>GP 6, Punts 12, avg 45.5, long 55, I20 1, KO 24/1 TB</td></tr><tr><td>2021</td><td>Oklahoma State <small>(FBS)</small><br>GP 14, FG 17-21, long 49, XP 36-36, 87 pts</td></tr><tr><td>2022</td><td>Oklahoma State <small>(FBS)</small><br>GP 12, FG 22-23, long 52, XP 42-42, 108 pts</td></tr></table></article><article class="ac"><div class="ah"><div class="ph" aria-label="photo coming soon">KA</div><div><h3>Kian Afrookhteh</h3><div class="hs">Dana Hills &middot; Dana Point, CA</div></div></div><div class="pc"><span class="">Saddleback College (2022–2023)</span><span class="">Nevada (2024)</span><span class="">Coastal Carolina (2025)</span><span class="">Utah State (2026–present)</span></div><div class="hl">2025 All-Sun Belt Honorable Mention at Coastal Carolina</div><table class="st"><tr><td>2023</td><td>Saddleback College <small>(JUCO)</small><br>GP 10, FG 16-19, long 42, XP 41-42, 89 pts</td></tr><tr><td>2024</td><td>Nevada <small>(FBS)</small><br>GP 4, FG 2-2, long 27, XP 9-9, 15 pts, KO 13/0 TB</td></tr><tr><td>2025</td><td>Coastal Carolina <small>(FBS)</small><br>GP 12, FG 15-19, long 44, XP 32-32, 77 pts</td></tr><tr><td>2026</td><td>Utah State <small>(FBS)</small><br>GP 7, FG 7-12, long 48, XP 14-14, 35 pts, KO 6/0 TB</td></tr></table></article><article class="ac"><div class="ah"><div class="ph" aria-label="photo coming soon">JB</div><div><h3>Josh Barnavon</h3><div class="hs">Harvard-Westlake &middot; Studio City, CA</div></div></div><div class="pc"><span class="">Penn (2024–present)</span></div><div class="hl">Kicker on the Penn roster</div><table class="st"><tr><td>2025</td><td>Penn <small>(FCS)</small><br>GP 5, KO 21/5 TB</td></tr></table></article><article class="ac"><div class="ah"><div class="ph" aria-label="photo coming soon">JB</div><div><h3>Josh Bryan</h3><div class="hs">Sierra Canyon &middot; Chatsworth, CA</div></div></div><div class="pc"><span class="">Notre Dame (2021–2022)</span></div><div class="hl">No. 1 kicker nationally in the HS class of 2021 (Chris Sailer); Polynesian Bowl</div><table class="st"><tr><td>2021</td><td>Notre Dame <small>(FBS)</small><br>GP 1, XP 1-1, 1 pts</td></tr></table></article><article class="ac"><div class="ah"><div class="ph" aria-label="photo coming soon">AF</div><div><h3>Aidan Flintoft</h3><div class="hs">Oaks Christian &middot; Westlake Village, CA</div></div></div><div class="pc"><span class="">Stanford (2023–present)</span></div><div class="hl">Stanford punter and holder; ACC All-Academic (2025)</div><table class="st"><tr><td>2023</td><td>Stanford <small>(FBS)</small><br>GP 10, Punts 31, avg 42.0, long 52, I20 9</td></tr><tr><td>2024</td><td>Stanford <small>(FBS)</small><br>GP 12, Punts 43, avg 42.9, long 56, I20 15</td></tr><tr><td>2025</td><td>Stanford <small>(FBS)</small><br>GP 12, Punts 58, avg 43.3, long 62, I20 11</td></tr><tr><td>2026</td><td>Stanford <small>(FBS)</small><br>GP 9, Punts 46, avg 43.2, long 54, I20 13</td></tr></table></article><article class="ac"><div class="ah"><div class="ph" aria-label="photo coming soon">AG</div><div><h3>Alessandro Garrett</h3><div class="hs">Chaminade &middot; West Hills, CA</div></div></div><div class="pc"><span class="">Holy Cross (2025–present)</span></div><div class="hl">Kicker and punter on the Holy Cross roster</div><table class="st"><tr><td>2025</td><td>Holy Cross <small>(FCS)</small><br>GP 1</td></tr><tr><td>2026</td><td>Holy Cross <small>(FCS)</small><br>GP 2, Punts 3, avg 37.0, long 44, I20 0</td></tr></table></article><article class="ac"><div class="ah"><div class="ph" aria-label="photo coming soon">BI</div><div><h3>Bohdie Ing</h3><div class="hs">Newbury Park &middot; Newbury Park, CA</div></div></div><div class="pc"><span class="">Ventura College (2025)</span><span class="">South Dakota (2026–present)</span></div><div class="hl">5-for-5 on field goals so far in 2026</div><table class="st"><tr><td>2025</td><td>Ventura College <small>(JUCO)</small><br>GP 12, FG 12-19, long 43, XP 58-60, 94 pts, Punts 2, avg 37.5, long 42, I20 1</td></tr><tr><td>2026</td><td>South Dakota <small>(FCS)</small><br>GP 10, FG 8-8, long 47, XP 44-46, 68 pts</td></tr></table></article><article class="ac"><div class="ah"><div class="ph" aria-label="photo coming soon">DK</div><div><h3>Dieter Kelly</h3><div class="hs">Orange Lutheran &middot; Orange, CA</div></div></div><div class="pc"><span class="">College of San Mateo (2024–2025)</span><span class="">Western Michigan (2026–present)</span></div><div class="hl">52-yard FG at Western Michigan (2026)</div><table class="st"><tr><td>2024</td><td>College of San Mateo <small>(JUCO)</small><br>GP 13, FG 21-25, long 52, XP 51-52, 114 pts</td></tr><tr><td>2025</td><td>College of San Mateo <small>(JUCO)</small><br>GP 13, FG 18-27, long 47, XP 49-50, 103 pts</td></tr><tr><td>2026</td><td>Western Michigan <small>(FBS)</small><br>GP 9, FG 11-12, long 52, XP 29-29, 62 pts</td></tr></table></article><article class="ac"><div class="ah"><div class="ph" aria-label="photo coming soon">CK</div><div><h3>Carter Kolesar</h3><div class="hs">Tehachapi &middot; Tehachapi, CA</div></div></div><div class="pc"><span class="">Bakersfield College (2025)</span><span class="">UT Martin (2026–present)</span></div><div class="hl">Kicker on the UT Martin roster</div><table class="st"><tr><td>2025</td><td>Bakersfield College <small>(JUCO)</small><br>GP 10, FG 1-1, long 35, XP 3-3, 6 pts</td></tr></table></article><article class="ac"><div class="ah"><div class="ph" aria-label="photo coming soon">JK</div><div><h3>Jacob Krienbring</h3><div class="hs">Loyola &middot; Los Angeles, CA</div></div></div><div class="pc"><span class="">Stony Brook (2025–present)</span></div><div class="hl">Punter and kicker on the Stony Brook roster</div><table class="st"><tr><td>2026</td><td>Stony Brook <small>(FCS)</small><br>GP 2, XP 4-5, 4 pts, KO 14/2 TB</td></tr></table></article><article class="ac"><div class="ah"><div class="ph" aria-label="photo coming soon">NL</div><div><h3>Noah LaBerge</h3><div class="hs">Oaks Christian &middot; Westlake Village, CA</div></div></div><div class="pc"><span class="">Michigan (2025–present)</span></div><div class="hl">Michigan (per Coach Cole Nov 2026); not listed on public Michigan roster pages as of last check</div></article><article class="ac"><div class="ah"><div class="ph" aria-label="photo coming soon">DL</div><div><h3>Denis Lynch</h3><div class="hs">Newbury Park &middot; Newbury Park, CA</div></div></div><div class="pc"><span class="">USC (2021–2024)</span><span class="">San Jose State (2025)</span></div><div class="hl">53-yard FG vs ASU, 3rd-longest in USC history</div><table class="st"><tr><td>2022</td><td>USC <small>(FBS)</small><br>GP 14, FG 15-22, long 49, XP 74-74, 119 pts, KO 2/0 TB</td></tr><tr><td>2023</td><td>USC <small>(FBS)</small><br>GP 13, FG 10-14, long 53, XP 65-66, 95 pts, KO 60/13 TB</td></tr><tr><td>2025</td><td>San Jose State <small>(FBS)</small><br>GP 10, FG 8-16, long 48, XP 19-19, 43 pts</td></tr></table></article><article class="ac"><div class="ah"><div class="ph" aria-label="photo coming soon">DL</div><div><h3>Dylan Lynch</h3><div class="hs">Liberty &middot; Bakersfield, CA</div></div></div><div class="pc"><span class="">Fresno State (2021–2025)</span></div><div class="hl">Graduated as Fresno State&#x27;s 4th-leading career scorer (320 points)</div><table class="st"><tr><td>2022</td><td>Fresno State <small>(FBS)</small><br>GP 9, FG 6-7, long 43, XP 15-15, 33 pts, KO 54/23 TB</td></tr><tr><td>2023</td><td>Fresno State <small>(FBS)</small><br>GP 13, FG 24-30, long 52, XP 40-40, 112 pts, KO 77/39 TB</td></tr><tr><td>2024</td><td>Fresno State <small>(FBS)</small><br>GP 13, FG 13-20, long 48, XP 38-39, 77 pts, KO 65/35 TB</td></tr><tr><td>2025</td><td>Fresno State <small>(FBS)</small><br>GP 13, FG 21-27, long 43, XP 34-34, 97 pts, KO 72/34 TB</td></tr></table></article><article class="ac"><div class="ah"><div class="ph" aria-label="photo coming soon">GM</div><div><h3>Grant Meadors</h3><div class="hs">Liberty &middot; Bakersfield, CA</div></div></div><div class="pc"><span class="">Oregon (2023–2024)</span><span class="">Sacramento State (2025–present)</span></div><div class="hl">Led Sac State in scoring with 87 points (2025)</div><table class="st"><tr><td>2023</td><td>Oregon <small>(FBS)</small><br>GP 5, XP 5-5, 5 pts, KO 8/4 TB</td></tr><tr><td>2024</td><td>Oregon <small>(FBS)</small><br>GP 1, KO 1/1 TB</td></tr><tr><td>2025</td><td>Sacramento State <small>(FCS)</small><br>GP 12, FG 12-15, long 42, XP 51-53, 87 pts</td></tr><tr><td>2026</td><td>Sacramento State <small>(FBS)</small><br>GP 9, FG 11-15, long 47, XP 15-15, 48 pts, KO 15/1 TB</td></tr></table></article><article class="ac"><div class="ah"><div class="ph" aria-label="photo coming soon">CM</div><div><h3>Chase Meyer</h3><div class="hs">Mater Dei &middot; Santa Ana, CA</div></div></div><div class="pc"><span class="">Penn (2022)</span><span class="">Tulsa (2023)</span><span class="">Penn State (2024)</span><span class="">Cal (2025–present)</span></div><div class="hl">2023 Third-Team All-AAC at Tulsa</div><table class="st"><tr><td>2022</td><td>Penn <small>(FCS)</small><br>GP 8, XP 0-1, 0 pts, KO 36/1 TB</td></tr><tr><td>2023</td><td>Tulsa <small>(FBS)</small><br>GP 12, FG 17-20, long 47, XP 30-31, 81 pts, KO 10/0 TB</td></tr><tr><td>2025</td><td>Cal <small>(FBS)</small><br>GP 13, FG 10-13, long 45, XP 39-39, 69 pts, KO 13/1 TB</td></tr><tr><td>2026</td><td>Cal <small>(FBS)</small><br>GP 3, FG 3-5, long 38, XP 5-5, 14 pts</td></tr></table></article><article class="ac"><div class="ah"><div class="ph" aria-label="photo coming soon">LM</div><div><h3>Lennox Miller</h3><div class="hs">Oaks Christian &middot; Westlake Village, CA</div></div></div><div class="pc"><span class="">UCLA (2025–present)</span></div><div class="hl">Punter on the UCLA roster</div></article><article class="ac"><div class="ah"><div class="ph" aria-label="photo coming soon">TM</div><div><h3>Ty Morrison</h3><div class="hs">Valencia &middot; Valencia, CA</div></div></div><div class="pc"><span class="">College of the Canyons (2021–2023)</span><span class="">Montana (2024–2025)</span></div><div class="hl">Two-time Big Sky Special Teams Player of the Week; 65-yard punt (2025)</div><table class="st"><tr><td>2022</td><td>College of the Canyons <small>(JUCO)</small><br>GP 10, FG 12-15, long 41, XP 30-32, 66 pts, Punts 57, avg 35.5, long 52, I20 22</td></tr><tr><td>2024</td><td>Montana <small>(FCS)</small><br>GP 14, FG 17-23, long 50, XP 49-50, 100 pts, Punts 54, avg 42.7, long 62, I20 11</td></tr><tr><td>2025</td><td>Montana <small>(FCS)</small><br>GP 15, FG 6-11, long 42, XP 59-59, 77 pts, Punts 55, avg 43.6, long 65, I20 19, KO 90/52 TB</td></tr></table></article><article class="ac"><div class="ah"><div class="ph" aria-label="photo coming soon">CP</div><div><h3>Cohen Peters</h3><div class="hs">Bakersfield Christian &middot; Bakersfield, CA</div></div></div><div class="pc"><span class="">Rose-Hulman (2026–present)</span></div><div class="hl">51-yard FG as a freshman, 3rd-longest in school history</div><table class="st"><tr><td>2026</td><td>Rose-Hulman <small>(D-III)</small><br>GP 8, FG 8-11, long 51, XP 31-33, 55 pts, KO 44/12 TB</td></tr></table></article><article class="ac"><div class="ah"><div class="ph" aria-label="photo coming soon">JR</div><div><h3>Jarrett Reeser</h3><div class="hs">Canyon &middot; Canyon Country, CA</div></div></div><div class="pc"><span class="">Michigan State (2022)</span><span class="">San Diego State (2022–2023)</span><span class="">Boise State (2024–2025)</span></div><div class="hl">Kicker and punter at three FBS programs; finished his career at Boise State</div><table class="st"><tr><td>2022</td><td>San Diego State <small>(FBS)</small><br>GP 3, XP 1-1, 1 pts, KO 5/1 TB</td></tr><tr><td>2024</td><td>Boise State <small>(FBS)</small><br>GP 7, KO 26/14 TB</td></tr><tr><td>2025</td><td>Boise State <small>(FBS)</small><br>GP 2, KO 3/2 TB</td></tr></table></article><article class="ac"><div class="ah"><div class="ph" aria-label="photo coming soon">AR</div><div><h3>Aaron Rodriguez</h3><div class="hs">Hart &middot; Newhall, CA</div></div></div><div class="pc"><span class="">Missouri (2019–2020)</span><span class="">New Mexico (2021–2024)</span></div><div class="hl">Led the nation in punts in 2021 and 2022; 75-yard punt (2024)</div><table class="st"><tr><td>2021</td><td>New Mexico <small>(FBS)</small><br>GP 12, Punts 81, avg 42.8, long 61, I20 16</td></tr><tr><td>2022</td><td>New Mexico <small>(FBS)</small><br>GP 12, Punts 81, avg 44.2, long 63, I20 24</td></tr><tr><td>2023</td><td>New Mexico <small>(FBS)</small><br>GP 12, Punts 52, avg 42.4, long 61, I20 17</td></tr><tr><td>2024</td><td>New Mexico <small>(FBS)</small><br>GP 12, Punts 41, avg 42.7, long 75</td></tr></table></article><article class="ac"><div class="ah"><div class="ph" aria-label="photo coming soon">LR</div><div><h3>Luis Rodriguez</h3><div class="hs">Verdugo Hills &middot; Tujunga, CA</div></div></div><div class="pc"><span class="">College of the Canyons (2024)</span><span class="">Kansas State (2025–present)</span></div><div class="hl">Juco All-American at College of the Canyons with a 54-yard FG (2024)</div><table class="st"><tr><td>2024</td><td>College of the Canyons <small>(JUCO)</small><br>GP 11, FG 21-25, long 54, XP 31-34, 94 pts, Punts 3, avg 33.3, long 46, I20 0, KO 58/31 TB</td></tr><tr><td>2025</td><td>Kansas State <small>(FBS)</small><br>GP 12, FG 13-15, long 51, XP 42-42, 81 pts</td></tr><tr><td>2026</td><td>Kansas State <small>(FBS)</small><br>GP 8, FG 12-14, long 51, XP 23-23, 59 pts</td></tr></table></article><article class="ac"><div class="ah"><div class="ph" aria-label="photo coming soon">CS</div><div><h3>Chris Salerno</h3><div class="hs">Crespi Carmelite &middot; Encino, CA</div></div></div><div class="pc"><span class="">Notre Dame (2021–2024)</span></div><div class="hl">Starting holder for the 2024 Notre Dame team that reached the CFP national championship game</div><table class="st"><tr><td>2024</td><td>Notre Dame <small>(FBS)</small><br>GP 16</td></tr></table></article><article class="ac"><div class="ah"><div class="ph" aria-label="photo coming soon">AS</div><div><h3>AJ Salo</h3><div class="hs">Chaminade &middot; West Hills, CA</div></div></div><div class="pc"><span class="">Cornell (2026–present)</span></div><div class="hl">Kicker on the Cornell roster</div></article><article class="ac"><div class="ah"><div class="ph" aria-label="photo coming soon">RS</div><div><h3>Ryon Sayeri</h3><div class="hs">Chaminade &middot; West Hills, CA</div></div></div><div class="pc"><span class="">USC (2024–present)</span></div><div class="hl">Set USC&#x27;s single-season record with 21 field goals (2025); Groza semifinalist</div><table class="st"><tr><td>2024</td><td>USC <small>(FBS)</small><br>GP 1, Punts 1, avg 57.0, long 57, I20 1</td></tr><tr><td>2025</td><td>USC <small>(FBS)</small><br>GP 13, FG 21-25, long 54, XP 48-48, 111 pts, KO 89/63 TB</td></tr><tr><td>2026</td><td>USC <small>(FBS)</small><br>GP 9, FG 1-2, long 54, 3 pts, KO 55/34 TB</td></tr></table></article><article class="ac"><div class="ah"><div class="ph" aria-label="photo coming soon">GS</div><div><h3>Gianni Smith</h3><div class="hs">Oak Park &middot; Oak Park, CA</div></div></div><div class="pc"><span class="">Portland State (2021–2023)</span><span class="">Wisconsin (2024)</span></div><div class="hl">55-yard FG and Second-Team All-Big Sky (2023)</div><table class="st"><tr><td>2021</td><td>Portland State <small>(FCS)</small><br>GP 9, FG 5-8, long 49, XP 29-29, 44 pts, KO 41/13 TB</td></tr><tr><td>2022</td><td>Portland State <small>(FCS)</small><br>GP 11, FG 5-6, long 40, XP 37-38, 52 pts, KO 50/18 TB</td></tr><tr><td>2023</td><td>Portland State <small>(FCS)</small><br>GP 11, FG 8-9, long 55, XP 42-44, 66 pts, KO 62/44 TB</td></tr></table></article><article class="ac"><div class="ah"><div class="ph" aria-label="photo coming soon">WW</div><div><h3>Will Weisberg</h3><div class="hs">Notre Dame HS &middot; Sherman Oaks, CA</div></div></div><div class="pc"><span class="">USC (2025–present)</span></div><div class="hl">On the USC roster since 2025</div><table class="st"><tr><td>2025</td><td>USC <small>(FBS)</small><br>GP 1, XP 2-2, 2 pts, KO 1/0 TB</td></tr></table></article><article class="ac"><div class="ah"><div class="ph" aria-label="photo coming soon">GW</div><div><h3>Garth White</h3><div class="hs">Oaks Christian &middot; Westlake Village, CA</div></div></div><div class="pc"><span class="">Ventura College (2019, 2021)</span><span class="">USC (2022–2024)</span><span class="">Rhode Island (2025)</span><span class="">Louisville (2026–present)</span></div><div class="hl">54-yard FG and 96 points at Rhode Island (2025)</div><table class="st"><tr><td>2021</td><td>Ventura College <small>(JUCO)</small><br>Punts 16, long 48, I20 4</td></tr><tr><td>2025</td><td>Rhode Island <small>(FCS)</small><br>GP 14, FG 14-18, long 54, XP 54-56, 96 pts, KO 79/26 TB</td></tr><tr><td>2026</td><td>Louisville <small>(FBS)</small><br>GP 2, XP 3-3, 3 pts</td></tr></table></article><article class="ac"><div class="ah"><div class="ph" aria-label="photo coming soon">AZ</div><div><h3>Ashton Zamani</h3><div class="hs">Sierra Canyon &middot; Chatsworth, CA</div></div></div><div class="pc"><span class="">Duke (2025–present)</span></div><div class="hl">Kicker on the Duke roster</div><table class="st"><tr><td>2026</td><td>Duke <small>(FBS)</small><br>GP 3</td></tr></table></article><article class="ac"><div class="ah"><div class="ph" aria-label="photo coming soon">JZ</div><div><h3>Josh Zammit</h3><div class="hs">Chaminade &middot; West Hills, CA</div></div></div><div class="pc"><span class="">College of the Canyons (2024)</span><span class="">Northern Arizona (2025–present)</span></div><div class="hl">Punter at NAU; injured and off official roster currently (per Coach Cole); 22 punts inside the 20 at College of the Canyons (2024)</div><table class="st"><tr><td>2024</td><td>College of the Canyons <small>(JUCO)</small><br>GP 11, Punts 47, avg 34.8, long 50, I20 22</td></tr></table></article></div>
+<p class="legend">Stats are college seasons only. Blank stats = no recorded college game stats yet. Photos coming soon.</p></main></div></body></html>
