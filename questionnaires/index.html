@@ -143,6 +143,12 @@ body.calmode #find,body.calmode #soon,body.calmode .controls,body.calmode #list{
 .tab.cmtab{color:var(--y)}
 @media(max-width:560px){.cm thead{display:none}.cm tr{display:block;border-bottom:1px solid var(--line);padding:8px 0}.cm td{display:inline-block;border:0;padding:2px 8px 2px 0}.cm td:first-child{display:block}}
 @media(max-width:420px){.tabs .tab{padding:12px 5px!important;font-size:12px!important;letter-spacing:0!important}.tabs .xfull{display:none}}
+</style><style id="sitetabs">
+.sitetabs{display:flex;gap:8px;flex-wrap:wrap;padding:10px 0 0}
+.sitetabs a{font-size:12.5px;font-weight:800;letter-spacing:.04em;color:#cfcfcf;border:1px solid #2a2a2a;border-radius:999px;padding:8px 14px;min-height:36px;display:inline-flex;align-items:center;white-space:nowrap;transition:.15s;text-decoration:none}
+.sitetabs a:hover{border-color:var(--y);color:var(--y)}
+.sitetabs a[aria-current=page]{background:var(--y);border-color:var(--y);color:#000}
+@media (max-width:560px){.sitetabs{gap:4px;flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none}.sitetabs::-webkit-scrollbar{display:none}.sitetabs a{font-size:10px;letter-spacing:0;padding:6px 6px;min-height:32px;flex:0 0 auto}}
 </style></head>
 <body>
 <div class="wrap">
@@ -150,6 +156,8 @@ body.calmode #find,body.calmode #soon,body.calmode .controls,body.calmode #list{
   <a class="brand" href="https://3point-kicking.square.site/" aria-label="3Point Kicking home"><img src="assets/3pk-logo.png" alt="3Point Kicking"></a>
   <div class="topbtns"><a class="home" href="https://3point-kicking.square.site/">&larr; 3PK Home</a><a class="home alt" href="../">Player Data</a></div>
  </header>
+ <nav class="sitetabs" aria-label="Pages"><a href="../">3PK Clients</a><a href="../college-pro/">College &amp; Pro</a><a href="../benchmarks/">Benchmarks</a><a href="../questionnaires/" aria-current="page">Recruiting</a><a href="../alumni/">Alumni</a></nav>
+
  <div class="pathway"><span>Not sure where to start? A <b>College Pathway meeting</b> (3 hours, $250) helps your family know which questionnaires to fill out first.</span>
   <a class="book" href="https://square.site/book/89Y7BKA1F7H9X/3point-kicking" target="_blank" rel="noopener">Book a meeting</a></div>
  <section class="hero">
