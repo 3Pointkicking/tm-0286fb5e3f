@@ -246,22 +246,21 @@ abbr.low{text-decoration:none;color:var(--o);font-weight:800;cursor:help;font-si
 </style>
 <!--pwa--><link rel="manifest" href="assets/manifest.webmanifest"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="3PK Trackman"><meta name="application-name" content="3PK Trackman"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png"><link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16.png"><style>body{padding-top:env(safe-area-inset-top)}@media print{body{padding-top:0}}</style><!--/pwa-->
 <style id="elite-academy">
-/* Elite Academy membership: site/elite_academy.json or elite_academy:true on a player. */
-.card.card-elite{position:relative}
-body[data-elite-style="border"] .card.card-elite,
-body[data-elite-style="both"] .card.card-elite{
+/* Elite Academy membership: site/elite_academy.json or elite_academy:true on a player.
+   Locked style is A+B: accent border and ELITE ACADEMY stamp. */
+.card.card-elite{
+  position:relative;
   border:2px solid var(--y);
   box-shadow:0 0 0 1px rgba(255,212,0,.30),0 12px 32px rgba(255,212,0,.16);
   background:linear-gradient(180deg,#1a1604,#0a0a0a);
 }
-body[data-elite-style="border"] .card.card-elite:before,
-body[data-elite-style="both"] .card.card-elite:before{
+.card.card-elite:before{
   opacity:1;
   height:4px;
   background:linear-gradient(90deg,var(--y),#fff3a0,var(--y));
 }
 .elite-stamp{
-  display:none;
+  display:inline-block;
   margin-left:auto;
   align-self:flex-start;
   flex:none;
@@ -281,50 +280,17 @@ body[data-elite-style="both"] .card.card-elite:before{
   white-space:normal;
   pointer-events:none;
 }
-body[data-elite-style="stamp"] .card.card-elite .elite-stamp,
-body[data-elite-style="both"] .card.card-elite .elite-stamp{display:inline-block}
-body[data-elite-style="stamp"] .card.card-elite header,
-body[data-elite-style="both"] .card.card-elite header{padding-right:4px;gap:10px}
+.card.card-elite header{padding-right:4px;gap:10px}
 @media (max-width:560px){
   .elite-stamp{font-size:8px;padding:4px 6px;max-width:70px;letter-spacing:.1em}
 }
-.elite-sample-banner,.elite-draft-bar{
-  background:linear-gradient(90deg,#3a2e00,#1a1400);
-  border:2px solid var(--y);
-  color:var(--y);
-  padding:14px 16px;
-  border-radius:14px;
-  margin:8px 0 16px;
-  font-weight:800;
-}
-.elite-sample-banner strong,.elite-draft-bar strong{display:block;font-size:15px;letter-spacing:.08em;text-transform:uppercase;margin-bottom:6px;color:var(--y)}
-.elite-sample-banner p,.elite-draft-bar p{color:#f5f5f5;font-weight:600;font-size:14px;line-height:1.45;margin:0 0 10px}
-.elite-sample-banner a,.elite-draft-bar a{color:var(--y);text-decoration:underline;text-underline-offset:2px}
-.elite-sample-banner code,.elite-draft-bar code{font-size:12px;color:#fff;background:#000;padding:1px 5px;border-radius:6px}
-.elite-toggles{display:flex;flex-wrap:wrap;gap:8px}
-.elite-toggles button{
-  font:inherit;font-size:13px;font-weight:800;letter-spacing:.04em;
-  padding:10px 14px;min-height:44px;border-radius:999px;cursor:pointer;
-  background:#0f0f0f;color:#fff;border:1px solid #444;
-}
-.elite-toggles button[aria-pressed="true"]{background:var(--y);color:#000;border-color:var(--y)}
 </style>
-</head><body data-elite-style="both">
+</head><body>
 <div class="wrap">
  <div class="top"><div class="lft"><a class="brand" href="https://3point-kicking.square.site/" aria-label="3Point Kicking home"><img src="assets/3pk-logo.png" alt="3Point Kicking"></a><a class="home" href="https://3point-kicking.square.site/">&larr; 3PK Home</a></div>
   <!-- LOGO SLOT (header): drop a PNG at site/assets/trackman-logo.png and re-run build_site.py -->
   <div class="top-r"><span class="tm"><img src="assets/trackman-logo.png" alt="Trackman"></span></div></div>
  <nav class="tabs" aria-label="Pages"><a href="./" aria-current="page">3PK Clients</a><a href="college-pro/">College &amp; Pro</a><a href="benchmarks/">Benchmarks</a><a href="questionnaires/">Recruiting</a><a href="alumni/">Alumni</a></nav>
-<aside class="elite-draft-bar" role="note">
-  <strong>Draft preview — not published</strong>
-  <p>Compare Elite Academy card styles on the flagged members. <a href="#p-carter-s">Jump to Carter Sobel and Kane Brazell</a> (Reese Stevens, next, is unmarked). Add a future member in <code>elite_academy.json</code> with one line: <code>"First Last": true</code>.</p>
-  <div class="elite-toggles" role="group" aria-label="Elite Academy card style">
-    <button type="button" data-elite-style="border" aria-pressed="false">A · Gold border</button>
-    <button type="button" data-elite-style="stamp" aria-pressed="false">B · ELITE ACADEMY stamp</button>
-    <button type="button" data-elite-style="both" aria-pressed="true">A+B · Border + stamp</button>
-  </div>
-</aside>
-
 <section class="hero">
   <h1>Player <span>Data</span></h1>
   <p>Real numbers from every Trackman session. Field goals, kickoffs and punts for our current clients, measured by Trackman radar.</p>
@@ -552,27 +518,5 @@ body[data-elite-style="both"] .card.card-elite header{padding-right:4px;gap:10px
 
 (function(){var t=[].slice.call(document.querySelectorAll('.lbt'));t.forEach(function(b){b.addEventListener('click',function(){
  t.forEach(function(x){var on=x===b;x.setAttribute('aria-selected',on?'true':'false');document.getElementById(x.getAttribute('aria-controls')).hidden=!on})})})})();
-</script>
-<script id="elite-academy-js">
-(function(){
-  var body=document.body;
-  var btns=[].slice.call(document.querySelectorAll('.elite-toggles [data-elite-style]'));
-  function apply(s){
-    if(s!=='border'&&s!=='stamp'&&s!=='both')s='both';
-    body.setAttribute('data-elite-style',s);
-    btns.forEach(function(b){b.setAttribute('aria-pressed',b.getAttribute('data-elite-style')===s?'true':'false')});
-  }
-  var m=(location.search.match(/[?&]elite=(border|stamp|both)/)||[])[1];
-  apply(m||body.getAttribute('data-elite-style')||'both');
-  btns.forEach(function(b){b.addEventListener('click',function(){
-    var s=b.getAttribute('data-elite-style');
-    apply(s);
-    try{
-      var u=new URL(location.href);
-      u.searchParams.set('elite',s);
-      history.replaceState(null,'',u.pathname+u.search+u.hash);
-    }catch(e){}
-  })});
-})();
 </script>
 </body></html>
