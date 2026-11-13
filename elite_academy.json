@@ -1,0 +1,15 @@
+{
+  "_note": "Per-player Elite Academy membership. Templates never hardcode names. To add a member later: add one line under members, e.g. \"First Last\": true, using the exact card name (same keys as players_config.json). You can also set elite_academy: true on that player in players_config.json. Nothing publishes until Coach says Publish.",
+  "_sample_preview": false,
+  "_style_default": "both",
+  "_draft_style_toggle": true,
+  "members": {
+    "Nick Lang": true,
+    "Michael Bruce": true,
+    "Carter Sobel": true,
+    "Collin LaChapelle": true,
+    "Kasra Maghami": true,
+    "Grey Broderick": true,
+    "Kane Brazell": true
+  }
+}
